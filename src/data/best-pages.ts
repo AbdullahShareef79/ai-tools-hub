@@ -200,8 +200,8 @@ export const bestPages: BestPage[] = [
           'Yes, many medical students use AI study tools extensively. Anki is extremely popular in medical education for its powerful spaced repetition system. StudyBuddy is increasingly used for its ability to generate flashcards from dense medical textbook chapters automatically. For anatomy and physiology, combining an AI study tool with image-based resources provides the best results.',
       },
     ],
-    relatedComparisons: ['studybuddy-vs-anki', 'best-ai-tools-for-students'],
-    relatedCategories: ['voice-to-text-apps'],
+    relatedComparisons: ['studybuddy-vs-anki', 'best-ai-tools-for-students', 'studybuddy-vs-quizlet'],
+    relatedCategories: ['voice-to-text-apps', 'ai-tools-for-college-students'],
   },
   {
     slug: 'voice-to-text-apps',
@@ -377,8 +377,8 @@ export const bestPages: BestPage[] = [
           'Voice-to-text (transcription) apps like VoiceScribe AI are designed to record audio and convert it to text â€” ideal for meetings, lectures, and interviews. Dictation software like ScribAI is designed for real-time voice typing â€” you speak and text appears instantly in your active app. Some users benefit from both: ScribAI for desktop typing and VoiceScribe AI for mobile recording.',
       },
     ],
-    relatedComparisons: ['voicescribe-vs-otter', 'scribai-vs-voicescribe'],
-    relatedCategories: ['dictation-software'],
+    relatedComparisons: ['voicescribe-vs-otter', 'scribai-vs-voicescribe', 'voicescribe-vs-google-docs-voice-typing'],
+    relatedCategories: ['dictation-software', 'dictation-software-for-windows'],
   },
   {
     slug: 'dictation-software',
@@ -554,8 +554,8 @@ export const bestPages: BestPage[] = [
           'Some dictation tools offer offline modes. Windows Voice Typing and Apple Dictation both support on-device processing. ScribAI offers limited offline capability. Dragon NaturallySpeaking works fully offline. However, cloud-based processing generally provides better accuracy, so an internet connection is recommended for the best results.',
       },
     ],
-    relatedComparisons: ['scribai-vs-voicescribe'],
-    relatedCategories: ['voice-to-text-apps'],
+    relatedComparisons: ['scribai-vs-voicescribe', 'scribai-vs-dragon'],
+    relatedCategories: ['voice-to-text-apps', 'dictation-software-for-windows'],
   },
   {
     slug: 'muslim-apps',
@@ -732,7 +732,536 @@ export const bestPages: BestPage[] = [
       },
     ],
     relatedComparisons: [],
-    relatedCategories: ['ai-study-tools'],
+    relatedCategories: ['ai-study-tools', 'ai-tools-for-college-students'],
+  },
+  {
+    slug: 'ai-note-taking-tools',
+    categorySlug: 'ai-note-taking-tools',
+    title: 'Best AI Note-Taking Tools',
+    metaTitle: 'Best AI Note-Taking Tools in 2026 — Top 5 Tested & Ranked',
+    metaDescription:
+      'We tested the 5 best AI note-taking tools in 2026. Compare Notion AI, Obsidian, Mem, Reflect, and OneNote Copilot for smart notes, summaries, and organization.',
+    intro:
+      'Taking notes is easy. Organizing, searching, and actually using those notes later? That\'s where most people fail. AI note-taking tools solve this by automatically summarizing, tagging, linking, and resurfacing your notes when you need them. We tested the top 5 to find the best option for students, professionals, and everyone in between.',
+    buyingGuide:
+      'When choosing an AI note-taking tool, focus on: **AI features** (summarization, auto-tagging, search quality), **organization** (folders, tags, bi-directional linking), **platform support** (mobile, desktop, web), **offline access**, and **integrations** (calendar, email, other tools). Students should prioritize lecture capture and search; professionals should prioritize meeting notes and task extraction.',
+    tools: [
+      {
+        name: 'Notion AI',
+        slug: 'notion-ai',
+        description:
+          'Notion AI combines the most flexible workspace in the market with powerful AI features. It can summarize pages, generate action items, answer questions about your notes, and help you write — all within a tool that already excels at organizing everything from class notes to project plans.',
+        pros: [
+          'Incredibly flexible workspace — databases, wikis, calendars, docs',
+          'AI summarizes pages, generates action items, and answers questions',
+          'Rich template ecosystem with hundreds of academic and work templates',
+          'Excellent collaboration and sharing features',
+          'Works on web, desktop (Mac/Windows), and mobile',
+        ],
+        cons: [
+          'AI add-on costs $10/month on top of existing plans',
+          'Can feel overwhelming for simple note-taking needs',
+          'Offline mode is limited — requires internet for most features',
+          'No built-in audio recording or transcription',
+          'Performance can lag with very large workspaces',
+        ],
+        bestFor: 'Students and professionals who want an all-in-one workspace with AI assistance for organizing everything.',
+        url: 'https://notion.so',
+        isOurProduct: false,
+        rating: 4.5,
+        pricing: 'Free + $10/month AI add-on',
+        features: ['AI summarization', 'AI writing', 'Databases', 'Templates', 'Collaboration', 'Web clipper'],
+      },
+      {
+        name: 'Obsidian',
+        slug: 'obsidian',
+        description:
+          'Obsidian is a local-first Markdown note-taking app that uses bi-directional linking to create a networked knowledge base. With community AI plugins, it becomes a powerful AI-enhanced note system — and your data stays on your device.',
+        pros: [
+          'Local-first — your notes are stored as plain Markdown files on your device',
+          'Bi-directional linking creates a powerful knowledge graph',
+          'Massive plugin ecosystem with 1000+ community extensions',
+          'AI plugins (Smart Connections, Copilot) add summarization and search',
+          'Completely free for personal use',
+        ],
+        cons: [
+          'Steeper learning curve than most note apps',
+          'AI features require third-party plugins (not built in)',
+          'Sync between devices requires Obsidian Sync ($8/month) or manual setup',
+          'No real-time collaboration',
+          'Mobile app is functional but not as polished as desktop',
+        ],
+        bestFor: 'Power users and researchers who want full control over their data with a linked knowledge base.',
+        url: 'https://obsidian.md',
+        isOurProduct: false,
+        rating: 4.4,
+        pricing: 'Free / Sync: $8/month',
+        features: ['Markdown notes', 'Bi-directional links', 'Graph view', 'Plugin system', 'Offline', 'Community AI plugins'],
+      },
+      {
+        name: 'Mem',
+        slug: 'mem',
+        description:
+          'Mem is an AI-native note-taking app that automatically organizes your notes without folders or tags. Just write — Mem\'s AI finds connections, surfaces related notes, and helps you search your knowledge base using natural language.',
+        pros: [
+          'AI automatically organizes and connects related notes',
+          'Natural language search — ask questions about your notes',
+          'No folders or tags required — reduces organizational overhead',
+          'Clean, fast interface focused on writing',
+          'Smart daily digest surfaces relevant past notes',
+        ],
+        cons: [
+          'No free tier — starts at $14.99/month',
+          'Less flexible than Notion for complex organization',
+          'Smaller ecosystem — fewer integrations and templates',
+          'No offline mode — requires internet connection',
+          'Limited export options compared to competitors',
+        ],
+        bestFor: 'Users who want AI to handle note organization automatically with minimal manual effort.',
+        url: 'https://mem.ai',
+        isOurProduct: false,
+        rating: 4.1,
+        pricing: '$14.99/month',
+        features: ['AI organization', 'Natural language search', 'Auto-linking', 'Daily digest', 'Meeting notes', 'AI chat'],
+      },
+      {
+        name: 'Reflect',
+        slug: 'reflect',
+        description:
+          'Reflect is a beautifully designed note-taking app that combines bi-directional linking with built-in AI. It transcribes voice notes, summarizes content, and organizes your thoughts — all with end-to-end encryption for privacy.',
+        pros: [
+          'Built-in AI assistant powered by GPT-4 and Whisper',
+          'Voice note recording with automatic transcription',
+          'End-to-end encryption for privacy',
+          'Beautiful, distraction-free design',
+          'Bi-directional linking and daily notes',
+        ],
+        cons: [
+          'Expensive — $10/month billed annually',
+          'Smaller community and fewer integrations than Notion or Obsidian',
+          'No free tier — 14-day trial only',
+          'Limited table and database features',
+          'Mobile app is good but not as feature-rich as desktop',
+        ],
+        bestFor: 'Privacy-conscious users who want beautiful AI-powered notes with voice transcription built in.',
+        url: 'https://reflect.app',
+        isOurProduct: false,
+        rating: 4.2,
+        pricing: '$10/month (annual)',
+        features: ['AI assistant', 'Voice transcription', 'E2E encryption', 'Bi-directional links', 'Daily notes', 'iOS & web'],
+      },
+      {
+        name: 'Microsoft OneNote + Copilot',
+        slug: 'onenote-copilot',
+        description:
+          'OneNote is Microsoft\'s free note-taking app, and with the new Copilot AI integration, it can summarize notes, generate to-do lists, rewrite content, and answer questions about your notebooks. If you\'re already in the Microsoft ecosystem, it\'s a natural choice.',
+        pros: [
+          'Free with any Microsoft account',
+          'Copilot AI adds summarization, rewriting, and Q&A',
+          'Excellent pen and handwriting support on Surface/tablets',
+          'Deep integration with Microsoft 365 (Teams, Outlook, Word)',
+          'Works offline with sync when connected',
+        ],
+        cons: [
+          'Copilot requires Microsoft 365 Copilot subscription ($30/month)',
+          'Organization system (notebooks → sections → pages) can feel rigid',
+          'Interface feels cluttered compared to modern alternatives',
+          'Search is decent but not as smart as AI-native competitors',
+          'Syncing can be slow with large notebooks',
+        ],
+        bestFor: 'Microsoft 365 users who want AI note-taking without switching ecosystems.',
+        url: 'https://onenote.com',
+        isOurProduct: false,
+        rating: 4.0,
+        pricing: 'Free / Copilot: $30/month (M365)',
+        features: ['Free tier', 'Copilot AI', 'Handwriting', 'M365 integration', 'Offline sync', 'Pen support'],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the best AI note-taking tool for students?',
+        answer:
+          'For most students, Notion AI offers the best balance of flexibility, AI features, and value. It can organize your entire academic life — notes, assignments, projects — with AI to summarize and assist. For students who prefer local-first privacy, Obsidian with AI plugins is an excellent free alternative.',
+      },
+      {
+        question: 'Is Notion AI worth the extra $10/month?',
+        answer:
+          'If you already use Notion for note-taking and organization, the AI add-on is worth it for most users. It saves significant time on summarization, writing, and searching through notes. However, if you only need basic note-taking, you may find the free tier sufficient without AI.',
+      },
+      {
+        question: 'Can AI note-taking tools transcribe lectures?',
+        answer:
+          'Some can. Reflect has built-in voice recording and transcription. For the best lecture transcription, consider pairing a note-taking app with a dedicated transcription tool like <a href="/best/voice-to-text-apps">VoiceScribe AI</a>, then importing the transcript into your notes.',
+      },
+      {
+        question: 'What is the best free AI note-taking app?',
+        answer:
+          'Obsidian is the best free option — it\'s free for personal use and supports AI features through community plugins. OneNote is also free (without Copilot AI). Notion has a generous free tier, but its AI features require the paid add-on.',
+      },
+      {
+        question: 'How do AI note-taking tools organize notes automatically?',
+        answer:
+          'AI note-taking tools use natural language processing to analyze your notes and identify key topics, people, and concepts. They then automatically tag, link, and categorize notes based on content similarity. Mem is the most aggressive about auto-organization, while Notion AI provides AI search and summarization on top of manual organization.',
+      },
+      {
+        question: 'Are my notes private with AI note-taking tools?',
+        answer:
+          'Privacy varies by tool. Obsidian stores notes locally on your device (most private). Reflect uses end-to-end encryption. Notion and Mem store notes on their cloud servers and process them with AI, meaning the company has access. Always read the privacy policy if this matters to you.',
+      },
+    ],
+    relatedComparisons: ['best-ai-tools-for-students'],
+    relatedCategories: ['ai-study-tools', 'ai-tools-for-college-students'],
+  },
+  {
+    slug: 'ai-tools-for-college-students',
+    categorySlug: 'ai-tools-for-college-students',
+    title: 'Best AI Tools for College Students',
+    metaTitle: 'Best AI Tools for College Students (2026) — Top 5 Picks',
+    metaDescription:
+      'The 5 best AI tools every college student needs in 2026. We tested study apps, note-takers, and transcription tools to find the ones that actually save time and boost grades.',
+    intro:
+      'College is a juggling act — lectures, readings, study sessions, papers, and group projects all competing for your limited time. The right AI tools can give you hours back every week by automating the most tedious parts of student life. We tested dozens of AI tools through a college student\'s lens and picked the 5 that deliver the most real-world value.',
+    buyingGuide:
+      'The best AI tool stack for college students covers three areas: **study and review** (flashcards, quizzes, spaced repetition), **note capture** (lecture recording, transcription, organization), and **writing and research** (drafting, summarization, citation help). You don\'t need one tool that does everything — a focused combination of 2–3 tools often works better than an all-in-one solution.',
+    tools: [
+      {
+        name: 'StudyBuddy',
+        slug: 'studybuddy',
+        description:
+          'StudyBuddy is the single most time-saving AI tool we tested for college students. Upload your lecture PDFs, class notes, or textbook photos and get flashcards, quizzes, summaries, and a personalized study plan generated in seconds. It\'s like having a study assistant that does the tedious prep work for you.',
+        pros: [
+          'AI generates flashcards, quizzes & summaries from any document',
+          'Smart study plans adapt to your progress and weak areas',
+          'Beautiful, intuitive interface — zero learning curve',
+          'Spaced repetition built in for long-term retention',
+          'Supports PDFs, images, and text — handles lecture slides perfectly',
+        ],
+        cons: [
+          'Requires internet for AI features',
+          'Newer platform — community is still growing',
+          'Some advanced features require premium subscription',
+        ],
+        bestFor: 'College students who want to turn lecture materials into study-ready content automatically.',
+        url: 'https://web-nu-umber-29.vercel.app',
+        isOurProduct: true,
+        rating: 4.7,
+        pricing: 'Free tier + Premium plans',
+        features: ['AI flashcards', 'AI quizzes', 'Document summarization', 'Study plans', 'Spaced repetition', 'PDF import'],
+      },
+      {
+        name: 'VoiceScribe AI',
+        slug: 'voicescribe-ai',
+        description:
+          'VoiceScribe AI turns your phone into a lecture recording and transcription tool. Hit record at the start of class, and get a clean, searchable transcript with speaker labels. Export to your notes app and never miss a key point from a lecture again.',
+        pros: [
+          'Accurate AI transcription for lectures and study groups',
+          'Speaker identification — knows who said what',
+          'Export to multiple formats for easy integration with notes',
+          'Generous free tier for students',
+          'Clean, minimal interface that just works',
+        ],
+        cons: [
+          'Mobile-focused — no dedicated desktop app',
+          'Requires good audio quality for best accuracy',
+          'Some accents and technical jargon can reduce accuracy',
+        ],
+        bestFor: 'College students who want to record and transcribe lectures automatically on their phone.',
+        url: 'https://voice-scrib-ai.vercel.app',
+        isOurProduct: true,
+        rating: 4.6,
+        pricing: 'Free tier + Premium plans',
+        features: ['Lecture recording', 'AI transcription', 'Speaker labels', 'Multi-format export', 'Search', 'Mobile-first'],
+      },
+      {
+        name: 'Notion AI',
+        slug: 'notion-ai',
+        description:
+          'Notion is the ultimate organizational tool for college students, and Notion AI makes it smarter. Use it as your all-in-one hub for class notes, assignment tracking, research, and group projects — with AI to summarize long readings and help draft papers.',
+        pros: [
+          'All-in-one workspace for notes, assignments, and projects',
+          'AI summarizes readings, helps with writing, and answers questions',
+          'Excellent templates for academic workflows (course planners, reading lists)',
+          'Great collaboration features for group projects',
+          'Free plan is generous enough for most student needs',
+        ],
+        cons: [
+          'AI features require $10/month add-on',
+          'Can be complex to set up — takes time to build your system',
+          'Not purpose-built for active studying (no flashcards or quizzes)',
+          'Offline support is limited',
+          'Overkill if you just need a simple note app',
+        ],
+        bestFor: 'College students who want to organize their entire academic life in one flexible workspace.',
+        url: 'https://notion.so',
+        isOurProduct: false,
+        rating: 4.4,
+        pricing: 'Free + $10/month AI add-on',
+        features: ['AI writing', 'Note organization', 'Assignment tracking', 'Templates', 'Collaboration', 'Database views'],
+      },
+      {
+        name: 'Quizlet',
+        slug: 'quizlet',
+        description:
+          'Quizlet remains the go-to for college students who want access to millions of pre-made study sets. Find flashcard decks for virtually any college course, or create your own. The Plus tier adds AI-powered study modes and explanations.',
+        pros: [
+          'Massive library of pre-made study sets for nearly every course',
+          'Multiple study modes — flashcards, practice tests, matching games',
+          'Easy to share sets with classmates',
+          'AI-powered explanations in Plus tier',
+          'Available everywhere — web, iOS, Android',
+        ],
+        cons: [
+          'Best features require $7.99/month subscription',
+          'Quality of community sets varies significantly',
+          'AI features are less powerful than dedicated AI study tools',
+          'No document import — have to search or create manually',
+          'Free tier shows distracting ads',
+        ],
+        bestFor: 'Students who want access to pre-made study materials and social study features for common courses.',
+        url: 'https://quizlet.com',
+        isOurProduct: false,
+        rating: 4.2,
+        pricing: 'Free (limited) / $7.99/month',
+        features: ['Flashcards', 'Study sets library', 'Practice tests', 'AI explanations', 'Study games', 'Mobile apps'],
+      },
+      {
+        name: 'Grammarly',
+        slug: 'grammarly',
+        description:
+          'Every college student writes papers, emails, and discussion posts — and Grammarly catches errors that spell-check misses. The AI writing assistant suggests improvements for clarity, tone, and structure. The free tier handles grammar and spelling; premium adds AI rewriting and plagiarism detection.',
+        pros: [
+          'Catches grammar, spelling, and punctuation errors everywhere',
+          'AI suggestions for clarity, conciseness, and tone',
+          'Works in browsers, Word, Google Docs, and email',
+          'Plagiarism detection (premium) is useful for academic writing',
+          'Free tier is genuinely useful — not just a teaser',
+        ],
+        cons: [
+          'Premium is $12/month (student pricing available)',
+          'AI suggestions can sometimes oversimplify academic writing',
+          'Doesn\'t understand discipline-specific terminology well',
+          'Can be overly aggressive with passive voice suggestions',
+          'Not a replacement for developing your own writing skills',
+        ],
+        bestFor: 'College students who want to improve their writing across all assignments and communications.',
+        url: 'https://grammarly.com',
+        isOurProduct: false,
+        rating: 4.3,
+        pricing: 'Free / $12/month Premium',
+        features: ['Grammar check', 'AI writing', 'Tone detection', 'Plagiarism check', 'Browser extension', 'Word integration'],
+      },
+    ],
+    faq: [
+      {
+        question: 'What are the best free AI tools for college students?',
+        answer:
+          'StudyBuddy offers a generous free tier with AI-generated flashcards and quizzes. VoiceScribe AI has a free tier for lecture transcription. Grammarly\'s free tier catches grammar errors everywhere. Notion\'s free plan covers full note organization (without AI). Together, these free tiers cover most student needs without spending anything.',
+      },
+      {
+        question: 'Can AI tools help me get better grades?',
+        answer:
+          'Yes — when used correctly. AI study tools like StudyBuddy automate the creation of study materials, so you spend more time actually studying. Spaced repetition (built into StudyBuddy and Anki) is scientifically proven to improve long-term retention. Students who combine AI study tools with consistent study habits typically see measurable grade improvements.',
+      },
+      {
+        question: 'Is it cheating to use AI tools in college?',
+        answer:
+          'Using AI for studying, note-taking, and grammar checking is generally accepted and encouraged. Using AI to generate essays or assignments you submit as your own work is typically a violation of academic integrity policies. The tools on this list focus on helping you learn and organize — not doing your work for you.',
+      },
+      {
+        question: 'What AI tools should a freshman get?',
+        answer:
+          'Start with a study tool (StudyBuddy for AI-powered studying or Anki for spaced repetition), a note-taking system (Notion for organization), and Grammarly for writing. Add VoiceScribe AI if you want to record and transcribe lectures. This stack covers 90% of what a freshman needs.',
+      },
+      {
+        question: 'Do I need to pay for AI study tools?',
+        answer:
+          'Not necessarily. Free tiers from StudyBuddy, Notion, Quizlet, and Grammarly cover basic needs well. However, premium subscriptions unlock the most powerful AI features — and the time savings often justify the cost for serious students. Many tools offer student discounts as well.',
+      },
+      {
+        question: 'What is the best AI tool for recording college lectures?',
+        answer:
+          'VoiceScribe AI is our top recommendation for recording and transcribing college lectures. It works on your phone, provides accurate AI transcription with speaker identification, and exports to formats you can import into your notes. For more options, see our <a href="/best/voice-to-text-apps">best voice-to-text apps</a> page.',
+      },
+    ],
+    relatedComparisons: ['studybuddy-vs-quizlet', 'studybuddy-vs-anki', 'best-ai-tools-for-students'],
+    relatedCategories: ['ai-study-tools', 'ai-note-taking-tools'],
+  },
+  {
+    slug: 'dictation-software-for-windows',
+    categorySlug: 'dictation-software-for-windows',
+    title: 'Best Dictation Software for Windows',
+    metaTitle: 'Best Dictation Software for Windows (2026) — Top 5 Tested',
+    metaDescription:
+      'Find the best dictation software for Windows PCs in 2026. We tested ScribAI, Dragon NaturallySpeaking, Windows Voice Typing, Whisper, and Google Docs Voice to find the fastest and most accurate.',
+    intro:
+      'Whether you\'re writing emails, drafting documents, or coding — typing with your voice on Windows can be 3x faster than a keyboard once you get the hang of it. But which dictation tool actually works best on Windows? We tested the top 5 options for accuracy, latency, system integration, and real-world usability on Windows 10 and 11.',
+    buyingGuide:
+      'When choosing Windows dictation software, consider: **system-wide support** (does it work in every app, or just a browser?), **accuracy** (especially for technical vocabulary), **latency** (real-time or delayed?), **custom commands** (punctuation, formatting), and **offline capability** (can you dictate without internet?). The best choice depends on whether you need dictation in specific apps or everywhere on your PC.',
+    tools: [
+      {
+        name: 'ScribAI',
+        slug: 'scribai',
+        description:
+          'ScribAI is purpose-built for Windows dictation. It works system-wide — meaning you can dictate into any application: Word, Slack, your browser, email clients, even code editors. The AI engine delivers high accuracy with low latency, and it handles punctuation commands naturally.',
+        pros: [
+          'Works system-wide — dictate into any Windows application',
+          'High accuracy with natural punctuation handling',
+          'Low latency — text appears almost instantly',
+          'Custom vocabulary for technical terms and names',
+          'Clean, minimal interface that stays out of the way',
+        ],
+        cons: [
+          'Windows only — no Mac or Linux version',
+          'Requires internet for AI transcription',
+          'Newer product — smaller community than Dragon',
+        ],
+        bestFor: 'Windows users who want fast, accurate, system-wide voice typing that works in every application.',
+        url: 'https://scrib-ai-six.vercel.app',
+        isOurProduct: true,
+        rating: 4.6,
+        pricing: 'Free tier + Premium plans',
+        features: ['System-wide dictation', 'AI accuracy', 'Low latency', 'Custom vocabulary', 'Punctuation commands', 'Windows native'],
+      },
+      {
+        name: 'Dragon NaturallySpeaking',
+        slug: 'dragon',
+        description:
+          'Dragon is the oldest and most established dictation software for Windows. It offers professional-grade accuracy, extensive voice command support, and can work offline. However, it comes with a steep price tag and Nuance (now owned by Microsoft) has shifted focus toward enterprise.',
+        pros: [
+          'Industry-leading accuracy for professional dictation',
+          'Extensive voice commands and formatting options',
+          'Works offline — no internet required',
+          'Deep integration with Microsoft Office',
+          'Can be trained to recognize your voice and vocabulary',
+        ],
+        cons: [
+          'Expensive — Professional starts at $699 one-time',
+          'No longer actively updated for consumer market',
+          'Heavy resource usage — can slow down older PCs',
+          'Steep learning curve for advanced features',
+          'Installation and setup is complex',
+        ],
+        bestFor: 'Professionals (lawyers, doctors, writers) who need maximum accuracy and are willing to invest in a premium tool.',
+        url: 'https://www.nuance.com/dragon.html',
+        isOurProduct: false,
+        rating: 4.3,
+        pricing: '$699 one-time (Professional)',
+        features: ['Offline mode', 'Voice commands', 'Custom training', 'Office integration', 'Professional accuracy', 'Macro support'],
+      },
+      {
+        name: 'Windows Voice Typing',
+        slug: 'windows-voice-typing',
+        description:
+          'Windows 11 includes a built-in voice typing tool (Win+H) that\'s free, fast, and surprisingly decent for basic dictation. It works in most text fields and supports auto-punctuation. For quick notes and emails, it\'s a solid free option that\'s already on your PC.',
+        pros: [
+          'Completely free — built into Windows 11',
+          'Fast to launch (Win+H shortcut)',
+          'Auto-punctuation works reasonably well',
+          'No installation required',
+          'Low resource usage',
+        ],
+        cons: [
+          'Accuracy is below dedicated dictation tools',
+          'Limited voice command support',
+          'Doesn\'t work in all applications',
+          'No custom vocabulary or training',
+          'Requires internet — no offline mode',
+          'No formatting commands beyond basic punctuation',
+        ],
+        bestFor: 'Windows users who want basic free voice typing for casual dictation without installing anything.',
+        url: 'https://support.microsoft.com/en-us/windows/use-voice-typing-to-talk-instead-of-type-on-your-pc-fec94565-c4bd-329d-e59a-af033fa5689f',
+        isOurProduct: false,
+        rating: 3.5,
+        pricing: 'Free (built into Windows 11)',
+        features: ['Free', 'Auto-punctuation', 'Quick launch', 'Built-in', 'Basic commands', 'Cloud-powered'],
+      },
+      {
+        name: 'Whisper (OpenAI)',
+        slug: 'whisper-desktop',
+        description:
+          'OpenAI\'s Whisper is a free, open-source speech recognition model that can be run locally on Windows. With community-built desktop wrappers, it offers excellent accuracy — but it\'s a developer-oriented tool that requires technical setup.',
+        pros: [
+          'Free and open-source',
+          'Excellent accuracy — competitive with commercial tools',
+          'Runs locally on your PC (GPU recommended)',
+          'Supports 99+ languages',
+          'No cloud data transmission — fully private',
+        ],
+        cons: [
+          'Requires technical setup (Python, command line, or third-party wrappers)',
+          'Not real-time — processes audio after recording',
+          'Needs a decent GPU for fast processing',
+          'No built-in voice commands or formatting',
+          'Not system-wide — requires a wrapper app for dictation use',
+        ],
+        bestFor: 'Technical users who want free, private, high-accuracy transcription and don\'t mind setup work.',
+        url: 'https://github.com/openai/whisper',
+        isOurProduct: false,
+        rating: 4.1,
+        pricing: 'Free (open source)',
+        features: ['Open source', 'Local processing', 'High accuracy', '99+ languages', 'GPU-accelerated', 'Privacy-first'],
+      },
+      {
+        name: 'Google Docs Voice Typing',
+        slug: 'google-docs-voice',
+        description:
+          'Google Docs has a built-in voice typing feature that works well for dictating directly into documents. It\'s completely free, surprisingly accurate for English, and supports voice commands for formatting. The catch: it only works in Google Docs in Chrome.',
+        pros: [
+          'Completely free — no subscription',
+          'Good accuracy for English dictation',
+          'Voice commands for formatting (bold, italic, new line)',
+          'No installation — works in the browser',
+          'Supports 100+ languages',
+        ],
+        cons: [
+          'Only works in Google Docs (Chrome browser)',
+          'Not system-wide — can\'t dictate into other apps',
+          'Requires internet connection',
+          'Voice commands are limited compared to dedicated tools',
+          'Accuracy drops significantly with accents or background noise',
+        ],
+        bestFor: 'Users who write primarily in Google Docs and want free, decent voice typing without installing software.',
+        url: 'https://support.google.com/docs/answer/4492226',
+        isOurProduct: false,
+        rating: 3.8,
+        pricing: 'Free',
+        features: ['Free', 'Voice commands', 'Multi-language', 'Browser-based', 'Formatting support', 'No install'],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the best free dictation software for Windows?',
+        answer:
+          'Windows Voice Typing (Win+H) is the easiest free option since it\'s built in. Google Docs Voice Typing is more accurate but only works in Google Docs. For the best free experience with broader application support, ScribAI\'s free tier provides better accuracy and system-wide dictation.',
+      },
+      {
+        question: 'Is ScribAI better than Dragon for Windows dictation?',
+        answer:
+          'For most users, yes. ScribAI is significantly more affordable, easier to set up, and offers modern AI accuracy. Dragon still has an edge for specialized professional vocabulary (legal, medical) and offline use, but its $699 price tag and discontinued consumer focus make ScribAI the better choice for most Windows users. See our <a href="/compare/scribai-vs-dragon">ScribAI vs Dragon comparison</a> for details.',
+      },
+      {
+        question: 'Can I use dictation software offline on Windows?',
+        answer:
+          'Dragon NaturallySpeaking works fully offline. Whisper can run locally if you set it up with a GPU. Windows Voice Typing, ScribAI, and Google Docs Voice Typing all require an internet connection for their AI processing.',
+      },
+      {
+        question: 'Does Windows 11 have built-in dictation?',
+        answer:
+          'Yes — press Win+H to open Windows Voice Typing. It supports auto-punctuation and works in most text fields. However, for professional or frequent use, a dedicated tool like ScribAI offers significantly better accuracy and more features.',
+      },
+      {
+        question: 'What dictation software do professional writers use on Windows?',
+        answer:
+          'Professional writers increasingly use AI-powered dictation tools like ScribAI for their balance of accuracy, speed, and affordability. Dragon NaturallySpeaking was the traditional professional choice but is being phased out for consumers. Many writers combine dictation with grammar tools like Grammarly for the best results.',
+      },
+      {
+        question: 'How accurate is voice dictation on Windows in 2026?',
+        answer:
+          'Modern AI dictation tools achieve 95-98% accuracy for clear English speech. ScribAI and Dragon lead in accuracy for Windows. Cloud-based tools (ScribAI, Google) generally outperform local-only options because they use larger AI models. Accuracy drops with strong accents, background noise, or technical jargon.',
+      },
+    ],
+    relatedComparisons: ['scribai-vs-dragon', 'scribai-vs-voicescribe'],
+    relatedCategories: ['dictation-software', 'voice-to-text-apps'],
   },
 ];
 

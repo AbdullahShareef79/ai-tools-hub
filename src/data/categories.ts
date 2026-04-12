@@ -62,6 +62,45 @@ export const categories: Category[] = [
     icon: '🌙',
     toolCount: 5,
   },
+  {
+    slug: 'ai-note-taking-tools',
+    name: 'AI Note-Taking Tools',
+    description:
+      'Smart note-taking apps that use AI to organize, summarize, and search your notes automatically.',
+    longDescription:
+      'AI note-taking tools go beyond basic text capture. They can transcribe audio, summarize meetings, tag and organize notes automatically, and even generate action items. Whether you are a student capturing lectures or a professional managing meeting notes, these tools save hours of manual effort.',
+    metaTitle: 'Best AI Note-Taking Tools in 2026 — Reviews & Comparisons',
+    metaDescription:
+      'Discover the best AI note-taking tools in 2026. Compare Notion AI, Obsidian, Mem, Reflect, and more for smart note organization, summarization, and search.',
+    icon: '📝',
+    toolCount: 5,
+  },
+  {
+    slug: 'ai-tools-for-college-students',
+    name: 'AI Tools for College Students',
+    description:
+      'The best AI-powered tools every college student needs — from study aids to writing assistants to note-taking.',
+    longDescription:
+      'College students face a unique combination of heavy reading, exam prep, essay writing, and group projects. The best AI tools for college students handle multiple parts of this workflow: generating study materials, transcribing lectures, organizing notes, and helping with research. We evaluate tools specifically through the lens of the modern college experience.',
+    metaTitle: 'Best AI Tools for College Students (2026) — Top Picks',
+    metaDescription:
+      'The best AI tools for college students in 2026. We tested study apps, note-taking tools, and writing assistants to find the ones that actually save time and improve grades.',
+    icon: '🎓',
+    toolCount: 5,
+  },
+  {
+    slug: 'dictation-software-for-windows',
+    name: 'Dictation Software for Windows',
+    description:
+      'The best dictation and voice typing software built specifically for Windows PCs — from free to professional.',
+    longDescription:
+      'Windows users have more dictation options than ever, from free built-in tools to powerful AI-driven desktop apps. The best Windows dictation software offers system-wide voice typing, custom commands, and high accuracy without requiring a browser. We test accuracy, latency, and Windows integration specifically.',
+    metaTitle: 'Best Dictation Software for Windows (2026) — Expert Picks',
+    metaDescription:
+      'Find the best dictation software for Windows in 2026. We tested ScribAI, Dragon, Windows Voice Typing, and more to find the fastest and most accurate options for your PC.',
+    icon: '🖥️',
+    toolCount: 5,
+  },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {

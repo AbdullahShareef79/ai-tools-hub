@@ -7,12 +7,18 @@ const footerLinks = {
     { name: 'Voice-to-Text Apps', href: '/best/voice-to-text-apps' },
     { name: 'Dictation Software', href: '/best/dictation-software' },
     { name: 'Muslim Apps', href: '/best/muslim-apps' },
+    { name: 'AI Note-Taking Tools', href: '/best/ai-note-taking-tools' },
+    { name: 'AI for College Students', href: '/best/ai-tools-for-college-students' },
+    { name: 'Dictation for Windows', href: '/best/dictation-software-for-windows' },
   ],
   Compare: [
     { name: 'StudyBuddy vs Anki', href: '/compare/studybuddy-vs-anki' },
     { name: 'ScribAI vs VoiceScribe', href: '/compare/scribai-vs-voicescribe' },
     { name: 'VoiceScribe vs Otter', href: '/compare/voicescribe-vs-otter' },
     { name: 'AI Tools for Students', href: '/compare/best-ai-tools-for-students' },
+    { name: 'StudyBuddy vs Quizlet', href: '/compare/studybuddy-vs-quizlet' },
+    { name: 'ScribAI vs Dragon', href: '/compare/scribai-vs-dragon' },
+    { name: 'VoiceScribe vs Google Docs', href: '/compare/voicescribe-vs-google-docs-voice-typing' },
   ],
   Company: [
     { name: 'About', href: '/about' },
