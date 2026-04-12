@@ -32,7 +32,7 @@ export { default as RelatedCategories } from './RelatedCategories';
 export { default as RelatedArticles } from './RelatedArticles';
 
 // ─── AdSense ────────────────────────────────────────────────────
-export { AdSenseScript, AdUnit, AdPlaceholder } from './AdSense';
+export { AdSenseScript, AdUnit, InArticleAd, MultiplexAd, AdPlaceholder } from './AdSense';
 
 // ─── JSON-LD Structured Data ────────────────────────────────────
 export {

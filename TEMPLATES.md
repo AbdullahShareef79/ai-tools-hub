@@ -1,4 +1,4 @@
-# AI Tools Hub — Scaling Guide
+﻿# AI Tools Hub â€” Scaling Guide
 
 > How to add new pages in minutes using just data files and reusable templates.
 
@@ -8,11 +8,11 @@
 
 ```
 src/
-├── components/      ← Atomic UI blocks (StarRating, ProsCons, FAQAccordion, …)
-├── templates/       ← Page-level templates (BestPageTemplate, ComparePageTemplate, BlogPostTemplate)
-├── data/            ← Content lives here — add an object, get a page
-├── app/             ← Route files — ultra-thin, just wire data → template
-└── lib/             ← SEO helpers (buildMetadata)
+â”œâ”€â”€ components/      â† Atomic UI blocks (StarRating, ProsCons, FAQAccordion, â€¦)
+â”œâ”€â”€ templates/       â† Page-level templates (BestPageTemplate, ComparePageTemplate, BlogPostTemplate)
+â”œâ”€â”€ data/            â† Content lives here â€” add an object, get a page
+â”œâ”€â”€ app/             â† Route files â€” ultra-thin, just wire data â†’ template
+â””â”€â”€ lib/             â† SEO helpers (buildMetadata)
 ```
 
 **The rule:** all page content is defined in `src/data/*.ts`. Route files in `src/app/` simply look up data and render a template. To add a new page, you only touch the data file.
@@ -21,16 +21,16 @@ src/
 
 ## 1. Add a New "Best X Tools" Page
 
-### Step 1 — Open `src/data/best-pages.ts`
+### Step 1 â€” Open `src/data/best-pages.ts`
 
 Add a new object to the `bestPages` array:
 
 ```ts
 {
-  slug: 'ai-writing-tools',                       // → /best/ai-writing-tools
+  slug: 'ai-writing-tools',                       // â†’ /best/ai-writing-tools
   categorySlug: 'ai-writing-tools',                // match a category in categories.ts
   title: 'Best AI Writing Tools',
-  metaTitle: 'Best AI Writing Tools in 2026 — Top 5 Reviewed',
+  metaTitle: 'Best AI Writing Tools in 2026 â€” Top 5 Reviewed',
   metaDescription: 'We tested the top AI writing tools...',
   intro: 'AI writing tools can help you...',
   buyingGuide: 'When choosing an AI writing tool, consider **accuracy**, **tone control**, and **integrations**.',
@@ -42,7 +42,7 @@ Add a new object to the `bestPages` array:
       pros: ['Fast dictation', 'Cross-platform', 'Affordable'],
       cons: ['No offline mode'],
       bestFor: 'Writers who dictate first drafts',
-      url: 'https://scribai.com',
+      url: 'https://scrib-ai-six.vercel.app',
       isOurProduct: true,
       rating: 4.7,
       pricing: 'Free / $9.99/mo',
@@ -59,7 +59,7 @@ Add a new object to the `bestPages` array:
 }
 ```
 
-### Step 2 — Add matching category in `src/data/categories.ts`
+### Step 2 â€” Add matching category in `src/data/categories.ts`
 
 ```ts
 {
@@ -68,14 +68,14 @@ Add a new object to the `bestPages` array:
   description: 'Compare the best AI-powered writing assistants.',
   metaTitle: 'Best AI Writing Tools (2026)',
   metaDescription: '...',
-  icon: '✍️',
+  icon: 'âœï¸',
   toolCount: 5,
 }
 ```
 
-### Step 3 — Done!
+### Step 3 â€” Done!
 
-Run `npm run build` — your new page will be generated at `/best/ai-writing-tools` with:
+Run `npm run build` â€” your new page will be generated at `/best/ai-writing-tools` with:
 - Full SEO metadata + JSON-LD structured data
 - Breadcrumbs with schema markup
 - Quick navigation sidebar
@@ -95,9 +95,9 @@ Add a new object to the `comparisons` array:
 
 ```ts
 {
-  slug: 'scribai-vs-grammarly',                    // → /compare/scribai-vs-grammarly
+  slug: 'scribai-vs-grammarly',                    // â†’ /compare/scribai-vs-grammarly
   title: 'ScribAI vs Grammarly',
-  metaTitle: 'ScribAI vs Grammarly (2026) — Which Is Better?',
+  metaTitle: 'ScribAI vs Grammarly (2026) â€” Which Is Better?',
   metaDescription: 'Head-to-head comparison of ScribAI and Grammarly...',
   intro: 'Both tools help you write better, but...',
   toolA: {
@@ -107,7 +107,7 @@ Add a new object to the `comparisons` array:
     pros: ['...'],
     cons: ['...'],
     bestFor: '...',
-    url: 'https://scribai.com',
+    url: 'https://scrib-ai-six.vercel.app',
     isOurProduct: true,
     rating: 4.7,
     pricing: 'Free / $9.99/mo',
@@ -125,9 +125,9 @@ Add a new object to the `comparisons` array:
     pricing: 'Free / $12/mo',
   },
   features: [
-    { feature: 'AI Dictation',   toolA: '✅ Built-in',    toolB: '❌ No' },
-    { feature: 'Grammar Check',  toolA: '✅ Advanced',    toolB: '✅ Industry-leading' },
-    { feature: 'Tone Detection', toolA: '✅ Basic',       toolB: '✅ Advanced' },
+    { feature: 'AI Dictation',   toolA: 'âœ… Built-in',    toolB: 'âŒ No' },
+    { feature: 'Grammar Check',  toolA: 'âœ… Advanced',    toolB: 'âœ… Industry-leading' },
+    { feature: 'Tone Detection', toolA: 'âœ… Basic',       toolB: 'âœ… Advanced' },
     // ... more rows
   ],
   verdict: 'ScribAI wins for dictation-first writers; Grammarly for pure grammar.',
@@ -149,11 +149,11 @@ Add a new object to the `blogPosts` array:
 
 ```ts
 {
-  slug: 'ai-writing-tips-2026',                    // → /blog/ai-writing-tips-2026
+  slug: 'ai-writing-tips-2026',                    // â†’ /blog/ai-writing-tips-2026
   title: '10 AI Writing Tips That Actually Work in 2026',
   metaTitle: '10 AI Writing Tips That Actually Work (2026)',
   metaDescription: 'Practical tips for using AI writing tools effectively...',
-  excerpt: 'AI can write for you — but only if you know how to prompt it right.',
+  excerpt: 'AI can write for you â€” but only if you know how to prompt it right.',
   author: 'AI Tools Hub Editorial',
   publishedAt: '2026-05-01',
   updatedAt: '2026-05-01',
@@ -164,7 +164,7 @@ Add a new object to the `blogPosts` array:
   content: `
     <h2>Tip 1: Start With an Outline</h2>
     <p>Before you ask AI to write, give it structure...</p>
-    <!-- use standard HTML — the prose-content class styles it beautifully -->
+    <!-- use standard HTML â€” the prose-content class styles it beautifully -->
   `,
 }
 ```
@@ -219,8 +219,8 @@ export default function CustomPage() {
       <PageHeader title="My Custom Tool Roundup" subtitle="..." />
       {/* ... mix any components ... */}
       <WhoIsThisFor audiences={[
-        { icon: '🎓', label: 'Students', description: 'Perfect for exam prep' },
-        { icon: '💼', label: 'Professionals', description: 'Great for meeting notes' },
+        { icon: 'ðŸŽ“', label: 'Students', description: 'Perfect for exam prep' },
+        { icon: 'ðŸ’¼', label: 'Professionals', description: 'Great for meeting notes' },
       ]} />
       <FAQAccordion items={[{ question: '...', answer: '...' }]} />
       <RelatedComparisons slugs={['studybuddy-vs-anki']} />
@@ -248,6 +248,6 @@ export default function CustomPage() {
 
 ```bash
 npm run dev          # Local development at http://localhost:3000
-npm run build        # Production build — verifies all pages generate
+npm run build        # Production build â€” verifies all pages generate
 npm run start        # Serve the production build locally
 ```
