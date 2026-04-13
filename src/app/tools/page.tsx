@@ -67,6 +67,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   'ai-note-taking-tools': '📝 Note-Taking',
   'ai-tools-for-college-students': '🎓 College Students',
   'dictation-software-for-windows': '💻 Windows Dictation',
+  'ai-writing-tools': '✍️ AI Writing Tools',
+  'ai-productivity-tools': '⚡ AI Productivity Tools',
 };
 
 export default function ToolsPage() {

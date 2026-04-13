@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ProsCons from './ProsCons';
 import StarRating from './StarRating';
 
@@ -63,7 +64,7 @@ export default function ToolRankingCard({ tool, rank }: ToolRankingCardProps) {
         </div>
 
         {/* CTA */}
-        <div className="mt-6 flex items-center gap-3">
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <a
             href={tool.url}
             target="_blank"
@@ -72,6 +73,12 @@ export default function ToolRankingCard({ tool, rank }: ToolRankingCardProps) {
           >
             Visit {tool.name} →
           </a>
+          <Link
+            href={`/tools/${tool.slug}`}
+            className="btn-secondary text-sm"
+          >
+            Read Full Review
+          </Link>
         </div>
       </div>
     </article>

@@ -27,6 +27,8 @@ export default function BlogIndexPage() {
           <Link href="/best/voice-to-text-apps" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">Voice-to-Text</Link>
           <Link href="/best/dictation-software" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">Dictation Software</Link>
           <Link href="/best/muslim-apps" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">Muslim Apps</Link>
+          <Link href="/best/ai-writing-tools" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">AI Writing</Link>
+          <Link href="/best/ai-productivity-tools" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">AI Productivity</Link>
           <Link href="/categories" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">All Categories →</Link>
         </div>
       </header>

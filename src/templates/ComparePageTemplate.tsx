@@ -95,6 +95,12 @@ export default function ComparePageTemplate({ comparison }: ComparePageTemplateP
               >
                 Visit {toolA.name} →
               </a>
+              <Link
+                href={`/tools/${toolA.slug}`}
+                className="btn-secondary mt-2 w-full text-center text-sm"
+              >
+                Read Our {toolA.name} Review
+              </Link>
             </div>
 
             {/* Tool B */}
@@ -123,6 +129,12 @@ export default function ComparePageTemplate({ comparison }: ComparePageTemplateP
               >
                 Visit {toolB.name} →
               </a>
+              <Link
+                href={`/tools/${toolB.slug}`}
+                className="mt-2 w-full text-center text-sm font-medium text-primary-600 hover:text-primary-700 hover:underline block"
+              >
+                Read Our {toolB.name} Review
+              </Link>
             </div>
           </div>
         </div>

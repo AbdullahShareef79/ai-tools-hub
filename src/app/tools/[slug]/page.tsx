@@ -85,11 +85,47 @@ export default function ToolReviewPage({ params }: PageProps) {
     },
   };
 
+  // FAQPage JSON-LD — 3 tool-specific questions for rich snippets
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `Is ${tool.name} free?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${tool.name} offers the following pricing: ${tool.pricing}. Check the official website for the latest plan details.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What is ${tool.name} best for?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: tool.bestFor,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How does ${tool.name} compare to alternatives?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${tool.name} earned a ${tool.rating}/5 rating in our hands-on review. For a full comparison with other top tools in this category, see our ${tool.bestPageTitle} guide.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <div className="container-page section-padding">
@@ -284,6 +320,32 @@ export default function ToolReviewPage({ params }: PageProps) {
               </p>
             </div>
           )}
+
+          {/* FAQ */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+            <dl className="space-y-4">
+              {[
+                {
+                  q: `Is ${tool.name} free?`,
+                  a: `${tool.name} pricing: ${tool.pricing}. Visit the official site for the most up-to-date plan information.`,
+                },
+                {
+                  q: `What is ${tool.name} best for?`,
+                  a: tool.bestFor,
+                },
+                {
+                  q: `How does ${tool.name} compare to alternatives?`,
+                  a: `${tool.name} scored ${tool.rating}/5 in our hands-on review. To see how it stacks up against other top tools in the same category, read our complete ${tool.bestPageTitle} guide.`,
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="rounded-xl border border-slate-200 bg-white p-5">
+                  <dt className="font-semibold text-slate-900">{q}</dt>
+                  <dd className="mt-2 text-sm text-slate-600 leading-relaxed">{a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
     </>

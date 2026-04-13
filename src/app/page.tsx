@@ -102,6 +102,8 @@ export default function HomePage() {
             <Link href="/best/muslim-apps" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">🌙 Muslim Apps</Link>
             <Link href="/best/ai-note-taking-tools" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">📝 AI Note-Taking</Link>
             <Link href="/best/ai-tools-for-college-students" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">🎓 AI for Students</Link>
+            <Link href="/best/ai-writing-tools" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">✍️ AI Writing Tools</Link>
+            <Link href="/best/ai-productivity-tools" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">⚡ AI Productivity</Link>
           </div>
         </div>
       </section>
@@ -146,7 +148,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {comparisons.map((comparison) => (
+            {comparisons.slice(0, 6).map((comparison) => (
               <ComparisonCard
                 key={comparison.slug}
                 title={comparison.title}
@@ -159,7 +161,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center">
             <Link href="/categories" className="btn-secondary">
-              See All Categories &amp; Comparisons →
+              View All 10 Comparisons →
             </Link>
           </div>
         </div>
