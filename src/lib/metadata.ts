@@ -1,19 +1,10 @@
 import type { Metadata } from 'next';
 
-// Only trust NEXT_PUBLIC_SITE_URL when it points to a real custom domain.
-// If it's a *.vercel.app URL it may be stale/wrong — use Vercel's injected vars instead.
-const _envUrl = process.env.NEXT_PUBLIC_SITE_URL ?? '';
-const _isCustomDomain = _envUrl.length > 0 && !_envUrl.includes('.vercel.app');
-// Server-side: VERCEL_PROJECT_PRODUCTION_URL is the stable project alias (e.g. myapp.vercel.app).
-// Client-side: NEXT_PUBLIC_ vars only — so we still expose the resolved value via NEXT_PUBLIC_SITE_URL
-// but only when it's a real custom domain.
-const SITE_URL: string =
-  (_isCustomDomain ? _envUrl : null) ??
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : null) ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ??
-  'https://ai-tools-hub-beryl.vercel.app';
+    : 'https://ai-tools-hub.vercel.app');
 const SITE_NAME = 'AI Tools Hub';
 const DEFAULT_DESCRIPTION =
   'Discover, compare, and choose the best AI tools for studying, voice-to-text, dictation, and more. Honest reviews, detailed comparisons, and expert recommendations.';
