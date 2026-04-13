@@ -1263,8 +1263,6 @@ export const bestPages: BestPage[] = [
     relatedComparisons: ['scribai-vs-dragon', 'scribai-vs-voicescribe'],
     relatedCategories: ['dictation-software', 'voice-to-text-apps'],
   },
-];
-
   {
     slug: 'ai-writing-tools',
     categorySlug: 'ai-writing-tools',
