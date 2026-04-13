@@ -897,7 +897,7 @@ export const blogPosts: BlogPost[] = [
     updatedAt: '2026-04-13',
     readingTime: '8 min read',
     tags: ['AI', 'Productivity', 'Tools', 'Work'],
-    relatedBestPages: ['dictation-software', 'ai-note-taking-tools', 'voice-to-text-apps'],
+    relatedBestPages: ['ai-productivity-tools', 'dictation-software', 'ai-note-taking-tools', 'voice-to-text-apps'],
     relatedComparisons: ['scribai-vs-dragon', 'voicescribe-vs-otter'],
     content: `
       <h2>AI Productivity Tools That Actually Save Time</h2>
@@ -943,7 +943,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '11 min read',
     tags: ['AI Writing', 'Grammarly', 'ChatGPT', 'Productivity', 'Content Creation'],
     relatedBestPages: ['ai-writing-tools', 'ai-productivity-tools'],
-    relatedComparisons: ['grammarly-vs-chatgpt'],
+    relatedComparisons: ['grammarly-vs-chatgpt', 'jasper-vs-copy-ai'],
     content: `
       <h2>Why AI Writing Tools Are a Game-Changer in 2026</h2>
       <p>Writing is one of the most time-consuming parts of modern knowledge work. Emails, reports, blog posts, marketing copy, essays — the average professional writes thousands of words a week. AI writing tools are changing that equation dramatically.</p>

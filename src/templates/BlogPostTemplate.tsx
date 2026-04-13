@@ -136,6 +136,19 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
             </nav>
           )}
 
+          {/* Quick-pick CTA — drives readers to the ranked best-page before they bounce */}
+          {post.relatedBestPages.length > 0 && (
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+              <div>
+                <p className="text-sm font-semibold text-indigo-700">🏆 Looking for the best pick?</p>
+                <p className="text-sm text-slate-600 mt-0.5">We tested and ranked every option — see the full breakdown.</p>
+              </div>
+              <Link href={`/best/${post.relatedBestPages[0]}`} className="btn-primary whitespace-nowrap text-sm shrink-0">
+                See Top Picks →
+              </Link>
+            </div>
+          )}
+
           {/* Article content */}
           <div
             className="prose-content mt-8"
