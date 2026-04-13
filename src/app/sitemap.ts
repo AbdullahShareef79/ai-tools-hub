@@ -6,8 +6,8 @@ import { bestPages, getAllUniqueToolSlugs } from '@/data/best-pages';
 // Production URL — update this if you add a custom domain.
 const SITE_URL = 'https://ai-tools-hub-beryl.vercel.app';
 
-// Cache the sitemap for 24 hours
-export const revalidate = 86400;
+// Statically generated at build time — no ISR cache that could serve stale URLs.
+export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
