@@ -3,11 +3,17 @@ import { getAllComparisonSlugs } from '@/data/comparisons';
 import { blogPosts } from '@/data/blog-posts';
 import { bestPages, getAllUniqueToolSlugs } from '@/data/best-pages';
 
-// VERCEL_URL is auto-injected by Vercel and always matches the actual deployment domain.
-// NEXT_PUBLIC_SITE_URL takes precedence when explicitly set to a custom/production domain.
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ai-tools-hub-beryl.vercel.app');
+// Only trust NEXT_PUBLIC_SITE_URL when it points to a real custom domain.
+// If it's a *.vercel.app URL it may be stale/wrong — use Vercel's injected vars instead.
+const _envUrl = process.env.NEXT_PUBLIC_SITE_URL ?? '';
+const _isCustomDomain = _envUrl.length > 0 && !_envUrl.includes('.vercel.app');
+const SITE_URL: string =
+  (_isCustomDomain ? _envUrl : null) ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : null) ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ??
+  'https://ai-tools-hub-beryl.vercel.app';
 
 // Cache the sitemap for 24 hours
 export const revalidate = 86400;
