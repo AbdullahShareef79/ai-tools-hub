@@ -73,6 +73,24 @@ export default function BestPageTemplate({ page }: BestPageTemplateProps) {
           yearSuffix="in 2026"
         />
 
+        {/* Last updated + share */}
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm text-slate-500">
+            🔄 Last updated:{' '}
+            <time dateTime="2026-04-13">April 13, 2026</time>
+          </p>
+          <div className="flex items-center gap-2">
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(page.metaTitle)}&url=${encodeURIComponent(`${SITE_URL}/best/${page.slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 transition-colors"
+            >
+              𝕏 Share
+            </a>
+          </div>
+        </div>
+
         {/* Quick navigation */}
         <div className="mt-8">
           <QuickNav

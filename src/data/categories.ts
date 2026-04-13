@@ -101,6 +101,32 @@ export const categories: Category[] = [
     icon: '🖥️',
     toolCount: 5,
   },
+  {
+    slug: 'ai-writing-tools',
+    name: 'AI Writing Tools',
+    description:
+      'AI-powered writing assistants that help you draft, edit, and polish any type of content faster and better.',
+    longDescription:
+      'AI writing tools range from real-time grammar checkers to full document generators. Whether you need to write blog posts, emails, essays, or marketing copy, the right AI writing assistant can cut your writing time dramatically while improving quality. We test accuracy, output quality, integrations, and real-world workflow impact.',
+    metaTitle: 'Best AI Writing Tools in 2026 — Ranked & Reviewed',
+    metaDescription:
+      'Discover the best AI writing tools in 2026. We tested Grammarly, ChatGPT, Jasper, Copy.ai, and Hemingway Editor to find the best options for every type of writer.',
+    icon: '✍️',
+    toolCount: 5,
+  },
+  {
+    slug: 'ai-productivity-tools',
+    name: 'AI Productivity Tools',
+    description:
+      'AI tools that automate scheduling, summarize meetings, draft communications, and reclaim hours of your day.',
+    longDescription:
+      'The best AI productivity tools do more than suggest improvements — they automate entire workflows. From AI calendar schedulers that protect your focus time to automation platforms that connect your apps, these tools compound over time. We evaluate real-world time savings, ease of setup, and integration depth.',
+    metaTitle: 'Best AI Productivity Tools in 2026 — Top 5 That Save Time',
+    metaDescription:
+      'The best AI productivity tools in 2026, ranked by real-world time savings. Compare Notion AI, ChatGPT, Reclaim.ai, Motion, and Zapier to find what works for your workflow.',
+    icon: '⚡',
+    toolCount: 5,
+  },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {
