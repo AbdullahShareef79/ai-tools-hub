@@ -4,7 +4,7 @@ import { comparisons } from '@/data/comparisons';
 import { blogPosts } from '@/data/blog-posts';
 import { bestPages } from '@/data/best-pages';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://aitoolshub.dev';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-tools-hub-beryl.vercel.app';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
