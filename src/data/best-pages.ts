@@ -1441,7 +1441,7 @@ export const bestPages: BestPage[] = [
           'AI-generated content can sometimes be detected by AI detectors like Turnitin or GPTZero. However, content that\'s heavily edited and personalized by a human is much harder to detect. Using AI to improve your own writing (via Grammarly or Hemingway) rather than generating full articles is less likely to be flagged.',
       },
     ],
-    relatedComparisons: ['grammarly-vs-chatgpt', 'jasper-vs-copy-ai', 'best-ai-tools-for-students'],
+    relatedComparisons: ['grammarly-vs-chatgpt', 'chatgpt-vs-jasper', 'jasper-vs-copy-ai', 'best-ai-tools-for-students'],
     relatedCategories: ['ai-note-taking-tools', 'ai-tools-for-college-students'],
   },
   {

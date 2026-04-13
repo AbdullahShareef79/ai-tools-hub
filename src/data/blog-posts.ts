@@ -943,7 +943,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: '11 min read',
     tags: ['AI Writing', 'Grammarly', 'ChatGPT', 'Productivity', 'Content Creation'],
     relatedBestPages: ['ai-writing-tools', 'ai-productivity-tools'],
-    relatedComparisons: ['grammarly-vs-chatgpt', 'jasper-vs-copy-ai'],
+    relatedComparisons: ['grammarly-vs-chatgpt', 'chatgpt-vs-jasper', 'jasper-vs-copy-ai'],
     content: `
       <h2>Why AI Writing Tools Are a Game-Changer in 2026</h2>
       <p>Writing is one of the most time-consuming parts of modern knowledge work. Emails, reports, blog posts, marketing copy, essays — the average professional writes thousands of words a week. AI writing tools are changing that equation dramatically.</p>
