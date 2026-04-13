@@ -6,7 +6,6 @@ export const metadata: Metadata = buildMetadata({
   title: 'Privacy Policy',
   description: 'Privacy Policy for AI Tools Hub. Learn how we collect, use, and protect your data.',
   path: '/privacy',
-  noIndex: true,
 });
 
 export default function PrivacyPage() {

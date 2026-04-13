@@ -6,7 +6,6 @@ export const metadata: Metadata = buildMetadata({
   title: 'Terms of Service',
   description: 'Terms of Service for AI Tools Hub. Read our terms and conditions for using the website.',
   path: '/terms',
-  noIndex: true,
 });
 
 export default function TermsPage() {

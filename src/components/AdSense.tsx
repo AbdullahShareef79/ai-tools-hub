@@ -3,7 +3,8 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+const ADSENSE_CLIENT_ID =
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-8689475230104463';
 
 /** Pages where ads should NOT be shown */
 const NO_AD_PATHS = ['/privacy', '/terms', '/contact', '/about'];
