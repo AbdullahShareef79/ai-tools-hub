@@ -19,6 +19,39 @@ interface BlogPostTemplateProps {
   relatedPosts?: RelatedArticle[];
 }
 
+/** Convert heading text to a URL-safe anchor ID */
+function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/<[^>]+>/g, '') // strip any inline HTML tags
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/** Extract all h2 headings from HTML content for the TOC */
+function extractHeadings(html: string): { id: string; label: string }[] {
+  const matches = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)];
+  return matches.map((m) => {
+    const label = m[1].replace(/<[^>]+>/g, '').trim();
+    return { id: slugifyHeading(label), label };
+  });
+}
+
+/** Inject id attributes into h2 tags so TOC anchor links work */
+function injectHeadingIds(html: string): string {
+  return html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_, attrs, inner) => {
+    const label = inner.replace(/<[^>]+>/g, '').trim();
+    const id = slugifyHeading(label);
+    return `<h2${attrs} id="${id}">${inner}</h2>`;
+  });
+}
+
+interface BlogPostTemplateProps {
+  post: BlogPost;
+  /** Related articles to display at the bottom */
+  relatedPosts?: RelatedArticle[];
+}
+
 /**
  * Reusable template for blog / article pages.
  *
@@ -31,6 +64,10 @@ interface BlogPostTemplateProps {
  * ```
  */
 export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTemplateProps) {
+  const headings = extractHeadings(post.content);
+  const contentWithIds = injectHeadingIds(post.content);
+  const showToc = headings.length >= 3;
+
   return (
     <>
       {/* Structured data */}
@@ -78,10 +115,37 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
 
           <AdPlaceholder label="Ad Placement — Article Top" />
 
+          {/* Table of Contents — shown when post has 3+ h2 headings */}
+          {showToc && (
+            <nav
+              className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5"
+              aria-label="Table of contents"
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">
+                In This Article
+              </p>
+              <ol className="space-y-2">
+                {headings.map((h, i) => (
+                  <li key={h.id} className="flex items-baseline gap-2">
+                    <span className="text-xs font-medium text-slate-400 tabular-nums w-4 shrink-0">
+                      {i + 1}.
+                    </span>
+                    <a
+                      href={`#${h.id}`}
+                      className="text-sm text-primary-600 hover:text-primary-700 hover:underline leading-snug"
+                    >
+                      {h.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )}
+
           {/* Article content */}
           <div
             className="prose-content mt-8"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: contentWithIds }}
           />
 
           <AdPlaceholder label="Ad Placement — Article Bottom" />
