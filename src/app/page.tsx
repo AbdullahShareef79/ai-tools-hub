@@ -74,7 +74,7 @@ export default function HomePage() {
             </div>
             <div className="hidden h-10 w-px bg-slate-200 sm:block" />
             <div>
-              <p className="text-3xl font-extrabold text-primary-600">7</p>
+              <p className="text-3xl font-extrabold text-primary-600">9</p>
               <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">Categories</p>
             </div>
             <div className="hidden h-10 w-px bg-slate-200 sm:block" />

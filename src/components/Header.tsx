@@ -17,6 +17,8 @@ const navigation = [
       { name: 'AI Note-Taking Tools', href: '/best/ai-note-taking-tools' },
       { name: 'AI for College Students', href: '/best/ai-tools-for-college-students' },
       { name: 'Dictation for Windows', href: '/best/dictation-software-for-windows' },
+      { name: 'AI Writing Tools', href: '/best/ai-writing-tools' },
+      { name: 'AI Productivity Tools', href: '/best/ai-productivity-tools' },
     ],
   },
   {
@@ -30,6 +32,9 @@ const navigation = [
       { name: 'StudyBuddy vs Quizlet', href: '/compare/studybuddy-vs-quizlet' },
       { name: 'ScribAI vs Dragon', href: '/compare/scribai-vs-dragon' },
       { name: 'VoiceScribe vs Google Docs', href: '/compare/voicescribe-vs-google-docs-voice-typing' },
+      { name: 'Grammarly vs ChatGPT', href: '/compare/grammarly-vs-chatgpt' },
+      { name: 'Notion AI vs Obsidian', href: '/compare/notion-ai-vs-obsidian' },
+      { name: 'Motion vs Reclaim.ai', href: '/compare/motion-vs-reclaim' },
     ],
   },
   { name: 'Blog', href: '/blog' },
