@@ -13,6 +13,7 @@ import {
   AggregateRatingJsonLd,
 } from '@/components';
 import { getCategoryBySlug } from '@/data/categories';
+import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL } from '@/lib/metadata';
 import type { BestPage } from '@/data/best-pages';
 
@@ -32,6 +33,11 @@ interface BestPageTemplateProps {
  */
 export default function BestPageTemplate({ page }: BestPageTemplateProps) {
   const category = getCategoryBySlug(page.categorySlug);
+
+  // Blog posts topically linked to this best-page
+  const relatedBlogPosts = blogPosts
+    .filter((p) => p.relatedBestPages.includes(page.slug))
+    .slice(0, 3);
 
   return (
     <>
@@ -137,6 +143,33 @@ export default function BestPageTemplate({ page }: BestPageTemplateProps) {
         <div className="mt-12">
           <RelatedCategories slugs={page.relatedCategories} />
         </div>
+
+        {/* From the Blog — topical articles */}
+        {relatedBlogPosts.length > 0 && (
+          <div className="mt-12">
+            <h2 className="mb-6 text-xl font-bold text-slate-900">From the Blog</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedBlogPosts.map((post) => (
+                <a
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group rounded-xl border border-slate-200 bg-white p-5 transition-shadow hover:shadow-md"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 mb-2">
+                    Article
+                  </p>
+                  <h3 className="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors leading-snug mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 line-clamp-2">{post.excerpt}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-indigo-600">
+                    Read article →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

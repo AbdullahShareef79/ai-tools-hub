@@ -30,8 +30,15 @@ export default function BlogPostPage({ params }: PageProps) {
   const post = getBlogPostBySlug(params.slug);
   if (!post) notFound();
 
-  const relatedPosts = blogPosts
-    .filter((p) => p.slug !== post.slug)
+  // Find topically related posts by matching relatedBestPages categories.
+  // Fall back to most-recent posts if no topical match exists.
+  const topicMatches = blogPosts.filter(
+    (p) =>
+      p.slug !== post.slug &&
+      p.relatedBestPages.some((s) => post.relatedBestPages.includes(s)),
+  );
+  const relatedPool = topicMatches.length >= 2 ? topicMatches : blogPosts.filter((p) => p.slug !== post.slug);
+  const relatedPosts = relatedPool
     .slice(0, 2)
     .map((p) => ({ slug: p.slug, title: p.title, excerpt: p.excerpt }));
 

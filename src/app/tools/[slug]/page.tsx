@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import CopyLinkButton from './CopyLinkButton';
 import { getToolBySlug, getAllUniqueToolSlugs } from '@/data/best-pages';
 import { getCategoryBySlug } from '@/data/categories';
+import { blogPosts } from '@/data/blog-posts';
 import { buildMetadata, SITE_URL } from '@/lib/metadata';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import StarRating from '@/components/StarRating';
@@ -50,6 +51,11 @@ export default function ToolReviewPage({ params }: PageProps) {
   const category = getCategoryBySlug(tool.categorySlug);
   const pageUrl = `${SITE_URL}/tools/${tool.slug}`;
   const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${tool.name} Review 2026 — ${tool.bestFor}`)}&url=${encodeURIComponent(pageUrl)}`;
+
+  // Blog posts covering this tool's category
+  const relatedBlogPosts = blogPosts
+    .filter((p) => p.relatedBestPages.includes(tool.bestPageSlug))
+    .slice(0, 2);
 
   // SoftwareApplication JSON-LD
   const jsonLd = {
@@ -346,6 +352,31 @@ export default function ToolReviewPage({ params }: PageProps) {
               ))}
             </dl>
           </div>
+
+          {/* From the Blog */}
+          {relatedBlogPosts.length > 0 && (
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">From the Blog</h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {relatedBlogPosts.map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="group rounded-xl border border-slate-200 bg-white p-5 hover:border-primary-300 hover:shadow-md transition-all"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600 mb-2">Article</p>
+                    <h3 className="font-semibold text-slate-900 group-hover:text-primary-700 transition-colors leading-snug mb-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 line-clamp-2">{post.excerpt}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-indigo-600">
+                      Read article →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
