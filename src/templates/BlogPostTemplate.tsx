@@ -46,12 +46,6 @@ function injectHeadingIds(html: string): string {
   });
 }
 
-interface BlogPostTemplateProps {
-  post: BlogPost;
-  /** Related articles to display at the bottom */
-  relatedPosts?: RelatedArticle[];
-}
-
 /**
  * Reusable template for blog / article pages.
  *
