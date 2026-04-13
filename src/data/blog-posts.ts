@@ -800,7 +800,7 @@ export const blogPosts: BlogPost[] = [
       <p>Windows Voice Typing works in almost every text field system-wide — email clients, browsers, chat apps, and more. It's decent for casual use but struggles with accuracy on accents and technical terms.</p>
 
       <h2>Built-In: Dictation in Microsoft Word & Office</h2>
-      <p>Microsoft 365 has its own dictation feature built into Word, Outlook, PowerPoint, and OneNote. Click the <strong>Dictate</strong> button in the Home ribbon (or press Alt+`) to start voice typing within the Office app. This uses Azure Speech and is generally more accurate than Windows Voice Typing for document creation.</p>
+      <p>Microsoft 365 has its own dictation feature built into Word, Outlook, PowerPoint, and OneNote. Click the <strong>Dictate</strong> button in the Home ribbon (or press Alt+&#96;) to start voice typing within the Office app. This uses Azure Speech and is generally more accurate than Windows Voice Typing for document creation.</p>
 
       <h2>Best Paid Option: ScribAI</h2>
       <p><a href="https://scrib-ai-six.vercel.app">ScribAI</a> is designed specifically for Windows dictation and outperforms both Windows Voice Typing and Microsoft 365 dictation in accuracy, speed, and features. It works system-wide in any app, supports custom vocabulary for technical terms, and has low latency so text appears almost instantly. See our <a href="/best/dictation-software-for-windows">Best Dictation Software for Windows</a> guide for our full ranking.</p>
