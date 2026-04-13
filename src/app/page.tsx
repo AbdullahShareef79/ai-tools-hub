@@ -17,24 +17,24 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50" aria-label="Hero">
         <div className="container-page section-padding text-center">
-          <span className="badge-primary mb-4">Trusted AI Tool Reviews</span>
+          <span className="badge-primary mb-4">Trusted AI Tool Reviews — Updated 2026</span>
           <h1 className="mx-auto max-w-4xl text-balance text-5xl font-extrabold tracking-tight text-slate-900 md:text-6xl lg:text-7xl">
-            Discover the{' '}
+            Find the{' '}
             <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
               Best AI Tools
             </span>{' '}
-            for Every Need
+            — Reviewed &amp; Compared
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600 md:text-xl">
-            Honest reviews, detailed comparisons, and expert recommendations.
-            Find the perfect AI tools for studying, transcription, dictation, and more.
+            Honest, hands-on reviews of AI study tools, voice-to-text apps, dictation software, and more.
+            We test everything so you don&apos;t have to.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/categories" className="btn-primary text-base">
-              Browse Categories →
+            <Link href="/best/ai-study-tools" className="btn-primary text-base">
+              See Best AI Study Tools →
             </Link>
-            <Link href="/blog" className="btn-secondary text-base">
-              Read Our Blog
+            <Link href="/categories" className="btn-secondary text-base">
+              Browse All Categories
             </Link>
           </div>
 
@@ -90,6 +90,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Quick-jump links */}
+      <section className="border-b border-slate-200 bg-white py-4">
+        <div className="container-page">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+            <span className="font-medium text-slate-500">Jump to:</span>
+            <Link href="/best/ai-study-tools" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">📚 Best AI Study Tools</Link>
+            <Link href="/best/voice-to-text-apps" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">🗣️ Voice-to-Text Apps</Link>
+            <Link href="/best/dictation-software" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">🎙️ Dictation Software</Link>
+            <Link href="/best/muslim-apps" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">🌙 Muslim Apps</Link>
+            <Link href="/best/ai-note-taking-tools" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">📝 AI Note-Taking</Link>
+            <Link href="/best/ai-tools-for-college-students" className="rounded-full border border-slate-200 px-4 py-1.5 text-slate-700 hover:border-primary-400 hover:text-primary-700 transition-colors">🎓 AI for Students</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
       <section className="section-padding bg-white">
         <div className="container-page">
           <div className="text-center">
@@ -142,7 +159,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center">
             <Link href="/categories" className="btn-secondary">
-              View All Categories →
+              See All Categories &amp; Comparisons →
             </Link>
           </div>
         </div>
@@ -338,23 +355,23 @@ export default function HomePage() {
       <section className="section-padding bg-gradient-to-r from-primary-600 to-primary-800">
         <div className="container-page text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl">
-            Ready to Find Your Perfect AI Tool?
+            Ready to Pick Your Perfect AI Tool?
           </h2>
           <p className="mt-3 text-lg text-primary-100">
-            Browse our categories, read comparisons, and discover the tools that fit your needs.
+            Browse our expert reviews, compare top tools side-by-side, and find exactly what fits your workflow.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/categories"
+              href="/best/ai-study-tools"
               className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-50"
             >
-              Browse All Categories
+              See Best AI Study Tools
             </Link>
             <Link
-              href="/blog"
+              href="/categories"
               className="inline-flex items-center justify-center rounded-lg border border-primary-300 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
             >
-              Read Our Blog
+              Browse All Categories
             </Link>
           </div>
         </div>

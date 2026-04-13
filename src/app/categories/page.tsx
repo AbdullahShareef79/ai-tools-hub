@@ -8,9 +8,9 @@ import { AdPlaceholder } from '@/components/AdSense';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'All Categories',
+  title: 'All AI Tool Categories — Reviews & Comparisons for 2026',
   description:
-    'Browse all AI tool categories. Find the best AI study tools, voice-to-text apps, dictation software, Muslim apps, and more with honest reviews and comparisons.',
+    'Browse every AI tool category we review — study tools, voice-to-text apps, dictation software, Muslim apps, note-taking, and more. Honest rankings with pros, cons, and pricing.',
   path: '/categories',
 });
 
@@ -21,11 +21,10 @@ export default function CategoriesPage() {
 
       <div className="text-center">
         <h1 className="text-4xl font-bold text-slate-900 md:text-5xl">
-          All Categories
+          AI Tool Categories
         </h1>
-        <p className="mt-4 text-lg text-slate-600">
-          Explore our curated categories of the best AI and productivity tools.
-          Each category includes in-depth reviews, honest pros and cons, and our expert recommendations.
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+          Every category is researched hands-on — with ranked lists, pros &amp; cons, pricing breakdowns, and honest recommendations. Pick a category to find the right tool for you.
         </p>
       </div>
 

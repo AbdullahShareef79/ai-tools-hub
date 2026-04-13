@@ -6,9 +6,9 @@ import { AdPlaceholder } from '@/components/AdSense';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Blog',
+  title: 'AI Tools Blog — Reviews, Guides & Comparisons for 2026',
   description:
-    'Read the latest articles on AI tools, study tips, voice-to-text technology, productivity, and more. Expert insights and guides from the AI Tools Hub team.',
+    'Expert guides, honest reviews, and practical tips on AI study tools, voice-to-text apps, dictation software, and more. Updated for 2026.',
   path: '/blog',
 });
 
@@ -18,10 +18,17 @@ export default function BlogIndexPage() {
       <Breadcrumbs items={[{ label: 'Blog' }]} />
 
       <header className="text-center">
-        <h1 className="text-4xl font-bold text-slate-900 md:text-5xl">Blog</h1>
-        <p className="mt-4 text-lg text-slate-600">
-          Insights, guides, and expert takes on AI tools, productivity, and technology.
+        <h1 className="text-4xl font-bold text-slate-900 md:text-5xl">AI Tools Blog</h1>
+        <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
+          Practical guides, honest reviews, and expert comparisons on AI study tools, voice-to-text apps, dictation software, and productivity tools — updated for 2026.
         </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-2 text-sm">
+          <Link href="/best/ai-study-tools" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">AI Study Tools</Link>
+          <Link href="/best/voice-to-text-apps" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">Voice-to-Text</Link>
+          <Link href="/best/dictation-software" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">Dictation Software</Link>
+          <Link href="/best/muslim-apps" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">Muslim Apps</Link>
+          <Link href="/categories" className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-slate-600 hover:border-primary-300 hover:text-primary-700 transition-colors">All Categories →</Link>
+        </div>
       </header>
 
       <AdPlaceholder label="Ad Placement — Blog Index Top" />
@@ -79,10 +86,10 @@ export default function BlogIndexPage() {
         </p>
         <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link href="/categories" className="btn-primary">
-            Browse Categories →
+            Browse All Categories →
           </Link>
-          <Link href="/" className="btn-secondary">
-            View Comparisons
+          <Link href="/best/ai-study-tools" className="btn-secondary">
+            See Best AI Study Tools
           </Link>
         </div>
       </div>

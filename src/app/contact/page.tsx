@@ -7,7 +7,6 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Get in touch with the AI Tools Hub team. Send us your questions, feedback, tool suggestions, or partnership inquiries.',
   path: '/contact',
-  noIndex: true,
 });
 
 export default function ContactPage() {
