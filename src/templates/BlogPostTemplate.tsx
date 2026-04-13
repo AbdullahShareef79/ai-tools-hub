@@ -30,7 +30,7 @@ function slugifyHeading(text: string): string {
 
 /** Extract all h2 headings from HTML content for the TOC */
 function extractHeadings(html: string): { id: string; label: string }[] {
-  const matches = [...html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)];
+  const matches = Array.from(html.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi));
   return matches.map((m) => {
     const label = m[1].replace(/<[^>]+>/g, '').trim();
     return { id: slugifyHeading(label), label };
