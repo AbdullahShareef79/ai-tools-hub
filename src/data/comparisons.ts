@@ -36,11 +36,11 @@ export const comparisons: Comparison[] = [
   {
     slug: 'studybuddy-vs-anki',
     title: 'StudyBuddy vs Anki',
-    metaTitle: 'StudyBuddy vs Anki (2026) "” Which Study Tool Is Better?',
+    metaTitle: 'StudyBuddy vs Anki (2026) — Which Study Tool Is Better?',
     metaDescription:
       'Detailed comparison of StudyBuddy and Anki. Compare AI features, ease of use, pricing, flashcard systems, and which study tool is best for your learning goals in 2026.',
     intro:
-      'Choosing the right study tool can make or break your exam prep. StudyBuddy and Anki are two of the most popular options "” but they take very different approaches. StudyBuddy leverages AI to generate study materials automatically, while Anki is a veteran open-source flashcard app with a powerful spaced repetition system. In this comparison, we break down features, usability, and value to help you decide.',
+      'Choosing the right study tool can make or break your exam prep. StudyBuddy and Anki are two of the most popular options — but they take very different approaches. StudyBuddy leverages AI to generate study materials automatically, while Anki is a veteran open-source flashcard app with a powerful spaced repetition system. In this comparison, we break down features, usability, and value to help you decide.',
     toolA: {
       name: 'StudyBuddy',
       slug: 'studybuddy',
@@ -80,7 +80,7 @@ export const comparisons: Comparison[] = [
         'Steep learning curve for new users',
         'Dated interface design',
         'iOS app costs $24.99',
-        'No AI "” you must create all cards manually',
+        'No AI — you must create all cards manually',
         'Plugin system can be confusing',
       ],
       bestFor: 'Power users who want full control over their flashcard system and don\'t mind the learning curve.',
@@ -106,18 +106,18 @@ export const comparisons: Comparison[] = [
     ],
     verdict: 'StudyBuddy for ease and AI power; Anki for free, manual control.',
     verdictDetail:
-      'If you want a study tool that does the work for you "” generating flashcards, quizzes, and study plans from your documents "” StudyBuddy is the clear winner. Its AI-first approach saves hours of manual card creation. However, if you prefer full control over every flashcard template, want offline access, and don\'t mind the learning curve, Anki\'s open-source power is hard to beat. For most students in 2026, we recommend starting with StudyBuddy for its speed and simplicity, then supplementing with Anki for specialized decks.',
+      'If you want a study tool that does the work for you — generating flashcards, quizzes, and study plans from your documents — StudyBuddy is the clear winner. Its AI-first approach saves hours of manual card creation. However, if you prefer full control over every flashcard template, want offline access, and don\'t mind the learning curve, Anki\'s open-source power is hard to beat. For most students in 2026, we recommend starting with StudyBuddy for its speed and simplicity, then supplementing with Anki for specialized decks.',
     relatedSlugs: ['best-ai-tools-for-students', 'studybuddy-vs-quizlet'],
     relatedBestPages: ['ai-study-tools', 'ai-tools-for-college-students'],
   },
   {
     slug: 'scribai-vs-voicescribe',
     title: 'ScribAI vs VoiceScribe AI',
-    metaTitle: 'ScribAI vs VoiceScribe AI (2026) "” Desktop vs Mobile Voice-to-Text',
+    metaTitle: 'ScribAI vs VoiceScribe AI (2026) — Desktop vs Mobile Voice-to-Text',
     metaDescription:
       'Compare ScribAI and VoiceScribe AI head-to-head. Which voice-to-text tool is best for desktop dictation vs mobile transcription? Full feature comparison inside.',
     intro:
-      'Both ScribAI and VoiceScribe AI are built for converting speech to text "” but they serve different use cases. ScribAI is a Windows desktop dictation tool designed for typing by voice in any application, while VoiceScribe AI is a mobile-first transcription app for recording and transcribing meetings, lectures, and more. Let\'s break down which one is right for you.',
+      'Both ScribAI and VoiceScribe AI are built for converting speech to text — but they serve different use cases. ScribAI is a Windows desktop dictation tool designed for typing by voice in any application, while VoiceScribe AI is a mobile-first transcription app for recording and transcribing meetings, lectures, and more. Let\'s break down which one is right for you.',
     toolA: {
       name: 'ScribAI',
       slug: 'scribai',
@@ -131,7 +131,7 @@ export const comparisons: Comparison[] = [
         'Designed specifically for desktop productivity',
       ],
       cons: [
-        'Windows only "” no Mac or Linux support',
+        'Windows only — no Mac or Linux support',
         'Focused on dictation, not long-form transcription',
         'Requires a decent microphone for best results',
       ],
@@ -147,14 +147,14 @@ export const comparisons: Comparison[] = [
       description:
         'A mobile transcription app that records and transcribes meetings, lectures, and conversations with AI-powered accuracy.',
       pros: [
-        'Mobile-first "” record anywhere on the go',
+        'Mobile-first — record anywhere on the go',
         'AI-powered transcription with speaker identification',
         'Great for meetings, lectures, and interviews',
         'Export to multiple formats (TXT, DOCX, SRT)',
         'Real-time transcription display',
       ],
       cons: [
-        'Mobile app "” not designed for desktop dictation',
+        'Mobile app — not designed for desktop dictation',
         'Requires good audio quality for best accuracy',
         'Some advanced features are premium only',
       ],
@@ -167,7 +167,7 @@ export const comparisons: Comparison[] = [
     features: [
       { feature: 'Primary Platform', toolA: 'ðŸ–¥ï¸ Windows Desktop', toolB: 'ðŸ“± Mobile (iOS/Android)' },
       { feature: 'Use Case', toolA: 'Real-time dictation', toolB: 'Recording & transcription' },
-      { feature: 'Real-time Typing', toolA: 'âœ… Yes "” types as you speak', toolB: 'âœ… Real-time display' },
+      { feature: 'Real-time Typing', toolA: 'âœ… Yes — types as you speak', toolB: 'âœ… Real-time display' },
       { feature: 'Meeting Recording', toolA: 'âŒ Not designed for this', toolB: 'âœ… Core feature' },
       { feature: 'Speaker Identification', toolA: 'âŒ No', toolB: 'âœ… Yes' },
       { feature: 'Works in Any App', toolA: 'âœ… System-wide', toolB: 'âŒ In-app only' },
@@ -177,20 +177,20 @@ export const comparisons: Comparison[] = [
       { feature: 'Offline Mode', toolA: 'âš ï¸ Limited', toolB: 'âš ï¸ Limited' },
       { feature: 'Accuracy (clear audio)', toolA: '~96%', toolB: '~95%' },
       { feature: 'Best Use Case', toolA: 'Desktop productivity typing', toolB: 'Mobile meeting/lecture recording' },
-      { feature: 'Learning Curve', toolA: 'Low "” start dictating immediately', toolB: 'Low "” tap record and go' },
+      { feature: 'Learning Curve', toolA: 'Low — start dictating immediately', toolB: 'Low — tap record and go' },
     ],
     verdict: 'ScribAI for desktop dictation; VoiceScribe AI for mobile transcription.',
     verdictDetail:
-      'These two tools complement each other perfectly. Use ScribAI when you\'re at your Windows PC and want to type emails, documents, or messages by voice. Use VoiceScribe AI when you\'re on the go and need to record and transcribe meetings, lectures, or interviews. Many users actually benefit from having both "” ScribAI for desktop productivity and VoiceScribe AI for mobile transcription. If you can only choose one, pick based on where you do most of your work.',
+      'These two tools complement each other perfectly. Use ScribAI when you\'re at your Windows PC and want to type emails, documents, or messages by voice. Use VoiceScribe AI when you\'re on the go and need to record and transcribe meetings, lectures, or interviews. Many users actually benefit from having both — ScribAI for desktop productivity and VoiceScribe AI for mobile transcription. If you can only choose one, pick based on where you do most of your work.',
     relatedSlugs: ['voicescribe-vs-otter', 'scribai-vs-dragon', 'voicescribe-vs-google-docs-voice-typing'],
     relatedBestPages: ['voice-to-text-apps', 'dictation-software', 'dictation-software-for-windows'],
   },
   {
     slug: 'voicescribe-vs-otter',
     title: 'VoiceScribe AI vs Otter.ai',
-    metaTitle: 'VoiceScribe AI vs Otter.ai (2026) "” Best Transcription App Compared',
+    metaTitle: 'VoiceScribe AI vs Otter.ai (2026) — Best Transcription App Compared',
     metaDescription:
-      'VoiceScribe AI vs Otter.ai "” which transcription app is better in 2026? We compare accuracy, features, pricing, and real-world performance in this detailed review.',
+      'VoiceScribe AI vs Otter.ai — which transcription app is better in 2026? We compare accuracy, features, pricing, and real-world performance in this detailed review.',
     intro:
       'VoiceScribe AI and Otter.ai are two of the most popular AI transcription apps on the market. Both promise accurate speech-to-text conversion, but they differ in pricing, features, and target audience. This comparison helps you decide which transcription tool deserves a spot on your phone.',
     toolA: {
@@ -259,32 +259,32 @@ export const comparisons: Comparison[] = [
     ],
     verdict: 'VoiceScribe AI for affordability and simplicity; Otter for team meeting workflows.',
     verdictDetail:
-      'For individual users who need clean, accurate transcription without the bloat, VoiceScribe AI is the better choice. It\'s more affordable, has a generous free tier, and nails the core transcription experience. Otter.ai shines for business teams who need deep video conferencing integrations and collaborative features "” but you\'ll pay significantly more for those capabilities. If you\'re a student, freelancer, or solo professional, VoiceScribe AI offers the best value. If you\'re on a business team with heavy Zoom/Teams usage, Otter.ai\'s integrations may justify the premium price.',
+      'For individual users who need clean, accurate transcription without the bloat, VoiceScribe AI is the better choice. It\'s more affordable, has a generous free tier, and nails the core transcription experience. Otter.ai shines for business teams who need deep video conferencing integrations and collaborative features — but you\'ll pay significantly more for those capabilities. If you\'re a student, freelancer, or solo professional, VoiceScribe AI offers the best value. If you\'re on a business team with heavy Zoom/Teams usage, Otter.ai\'s integrations may justify the premium price.',
     relatedSlugs: ['scribai-vs-voicescribe', 'voicescribe-vs-google-docs-voice-typing'],
     relatedBestPages: ['voice-to-text-apps', 'dictation-software-for-windows'],
   },
   {
     slug: 'best-ai-tools-for-students',
     title: 'Best AI Tools for Students',
-    metaTitle: 'Best AI Tools for Students in 2026 "” Complete Comparison',
+    metaTitle: 'Best AI Tools for Students in 2026 — Complete Comparison',
     metaDescription:
       'Compare the best AI tools for students in 2026. From study aids to writing assistants, we rank and review the top AI-powered tools that help students learn smarter.',
     intro:
-      'AI is transforming education, and students who use the right tools have a massive advantage. But with so many AI tools available, which ones are actually worth your time? In this comparison, we pit the top AI student tools against each other across categories "” study aids, writing assistants, research tools, and more "” to help you build the ultimate student toolkit.',
+      'AI is transforming education, and students who use the right tools have a massive advantage. But with so many AI tools available, which ones are actually worth your time? In this comparison, we pit the top AI student tools against each other across categories — study aids, writing assistants, research tools, and more — to help you build the ultimate student toolkit.',
     toolA: {
       name: 'StudyBuddy',
       slug: 'studybuddy',
       description:
         'An all-in-one AI study tool that generates flashcards, quizzes, summaries, and study plans from any study material.',
       pros: [
-        'All-in-one study solution "” flashcards, quizzes, summaries, plans',
+        'All-in-one study solution — flashcards, quizzes, summaries, plans',
         'AI generates materials from your actual documents',
         'Saves hours of manual study prep',
         'Adapts to your learning progress',
         'Clean, distraction-free interface',
       ],
       cons: [
-        'Focused on study/review "” not a writing or research tool',
+        'Focused on study/review — not a writing or research tool',
         'Requires internet for AI features',
         'Premium features behind paywall',
       ],
@@ -333,7 +333,7 @@ export const comparisons: Comparison[] = [
     ],
     verdict: 'StudyBuddy for exam prep and active studying; Notion AI for note-taking and writing.',
     verdictDetail:
-      'The best choice depends on what you need most. If your priority is acing exams "” and you want AI to generate flashcards, quizzes, and study plans automatically "” StudyBuddy is purpose-built for that. If you need a full workspace for organizing notes, writing papers, and managing projects with AI assistance, Notion AI is the more versatile (but more complex) option. Many top students actually use both: Notion AI for organizing coursework and notes, and StudyBuddy for active review and exam prep. That combination covers the full student workflow.',
+      'The best choice depends on what you need most. If your priority is acing exams — and you want AI to generate flashcards, quizzes, and study plans automatically — StudyBuddy is purpose-built for that. If you need a full workspace for organizing notes, writing papers, and managing projects with AI assistance, Notion AI is the more versatile (but more complex) option. Many top students actually use both: Notion AI for organizing coursework and notes, and StudyBuddy for active review and exam prep. That combination covers the full student workflow.',
     relatedSlugs: ['studybuddy-vs-anki', 'studybuddy-vs-quizlet'],
     relatedBestPages: ['ai-study-tools', 'ai-tools-for-college-students'],
   },

@@ -16,9 +16,9 @@ export const products: Product[] = [
     name: 'StudyBuddy',
     tagline: 'AI-powered study companion',
     description:
-      'StudyBuddy uses artificial intelligence to help students learn faster and retain more. Generate flashcards, quizzes, summaries, and study plans from any material "” all powered by AI.',
+      'StudyBuddy uses artificial intelligence to help students learn faster and retain more. Generate flashcards, quizzes, summaries, and study plans from any material — all powered by AI.',
     url: 'https://web-nu-umber-29.vercel.app',
-    icon: 'ðŸ“š',
+    icon: '📚',
     category: 'AI Study Tools',
     categorySlug: 'ai-study-tools',
     features: [
@@ -37,7 +37,7 @@ export const products: Product[] = [
     description:
       'ScribAI is a powerful Windows desktop application for real-time dictation and voice-to-text. Type with your voice anywhere on your PC with high accuracy and speed.',
     url: 'https://scrib-ai-six.vercel.app',
-    icon: 'ðŸŽ™ï¸',
+    icon: '🎙️',
     category: 'Dictation Software',
     categorySlug: 'dictation-software',
     features: [
@@ -54,9 +54,9 @@ export const products: Product[] = [
     name: 'VoiceScribe AI',
     tagline: 'Mobile voice-to-text & transcription',
     description:
-      'VoiceScribe AI turns your phone into a professional transcription tool. Record meetings, lectures, interviews, and more "” then get accurate transcripts powered by AI.',
+      'VoiceScribe AI turns your phone into a professional transcription tool. Record meetings, lectures, interviews, and more — then get accurate transcripts powered by AI.',
     url: 'https://voice-scrib-ai.vercel.app',
-    icon: 'ðŸ—£ï¸',
+    icon: '🗣️',
     category: 'Voice-to-Text Apps',
     categorySlug: 'voice-to-text-apps',
     features: [
@@ -70,12 +70,12 @@ export const products: Product[] = [
   },
   {
     id: 'noor',
-    name: 'Noor "” Muslim Friend',
+    name: 'Noor — Muslim Friend',
     tagline: 'Muslim lifestyle & Islamic tools app',
     description:
-      'Noor (Muslim Friend) is a comprehensive Islamic lifestyle app featuring prayer times, Quran reading, dhikr counters, dua collections, Qibla finder, and much more "” all in one beautiful app.',
+      'Noor (Muslim Friend) is a comprehensive Islamic lifestyle app featuring prayer times, Quran reading, dhikr counters, dua collections, Qibla finder, and much more — all in one beautiful app.',
     url: 'https://muslim-friend.vercel.app',
-    icon: 'ðŸŒ™',
+    icon: '🌙',
     category: 'Muslim Apps',
     categorySlug: 'muslim-apps',
     features: [
