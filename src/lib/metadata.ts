@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 
+// VERCEL_PROJECT_PRODUCTION_URL is auto-injected by Vercel and always correct.
+// We prioritise it over NEXT_PUBLIC_SITE_URL which may be stale/wrong in env vars.
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'https://ai-tools-hub.vercel.app');
+    : process.env.NEXT_PUBLIC_SITE_URL) ||
+  'https://ai-tools-hub-beryl.vercel.app';
 const SITE_NAME = 'AI Tools Hub';
 const DEFAULT_DESCRIPTION =
   'Discover, compare, and choose the best AI tools for studying, voice-to-text, dictation, and more. Honest reviews, detailed comparisons, and expert recommendations.';

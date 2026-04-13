@@ -3,11 +3,13 @@ import { getAllComparisonSlugs } from '@/data/comparisons';
 import { blogPosts } from '@/data/blog-posts';
 import { bestPages, getAllUniqueToolSlugs } from '@/data/best-pages';
 
+// VERCEL_PROJECT_PRODUCTION_URL is auto-injected by Vercel and always correct.
+// We prioritise it over NEXT_PUBLIC_SITE_URL which may be stale/wrong in env vars.
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'https://ai-tools-hub.vercel.app');
+    : process.env.NEXT_PUBLIC_SITE_URL) ||
+  'https://ai-tools-hub-beryl.vercel.app';
 
 // Cache the sitemap for 24 hours
 export const revalidate = 86400;
