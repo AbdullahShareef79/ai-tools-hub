@@ -1,4 +1,4 @@
-﻿export interface Product {
+export interface Product {
   id: string;
   name: string;
   tagline: string;
@@ -16,7 +16,7 @@ export const products: Product[] = [
     name: 'StudyBuddy',
     tagline: 'AI-powered study companion',
     description:
-      'StudyBuddy uses artificial intelligence to help students learn faster and retain more. Generate flashcards, quizzes, summaries, and study plans from any material â€” all powered by AI.',
+      'StudyBuddy uses artificial intelligence to help students learn faster and retain more. Generate flashcards, quizzes, summaries, and study plans from any material "” all powered by AI.',
     url: 'https://web-nu-umber-29.vercel.app',
     icon: 'ðŸ“š',
     category: 'AI Study Tools',
@@ -54,7 +54,7 @@ export const products: Product[] = [
     name: 'VoiceScribe AI',
     tagline: 'Mobile voice-to-text & transcription',
     description:
-      'VoiceScribe AI turns your phone into a professional transcription tool. Record meetings, lectures, interviews, and more â€” then get accurate transcripts powered by AI.',
+      'VoiceScribe AI turns your phone into a professional transcription tool. Record meetings, lectures, interviews, and more "” then get accurate transcripts powered by AI.',
     url: 'https://voice-scrib-ai.vercel.app',
     icon: 'ðŸ—£ï¸',
     category: 'Voice-to-Text Apps',
@@ -70,10 +70,10 @@ export const products: Product[] = [
   },
   {
     id: 'noor',
-    name: 'Noor â€” Muslim Friend',
+    name: 'Noor "” Muslim Friend',
     tagline: 'Muslim lifestyle & Islamic tools app',
     description:
-      'Noor (Muslim Friend) is a comprehensive Islamic lifestyle app featuring prayer times, Quran reading, dhikr counters, dua collections, Qibla finder, and much more â€” all in one beautiful app.',
+      'Noor (Muslim Friend) is a comprehensive Islamic lifestyle app featuring prayer times, Quran reading, dhikr counters, dua collections, Qibla finder, and much more "” all in one beautiful app.',
     url: 'https://muslim-friend.vercel.app',
     icon: 'ðŸŒ™',
     category: 'Muslim Apps',

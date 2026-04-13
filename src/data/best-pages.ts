@@ -1,4 +1,4 @@
-﻿export interface ToolListing {
+export interface ToolListing {
   name: string;
   slug: string;
   description: string;
@@ -31,19 +31,19 @@ export const bestPages: BestPage[] = [
     slug: 'ai-study-tools',
     categorySlug: 'ai-study-tools',
     title: 'Best AI Study Tools',
-    metaTitle: 'Best AI Study Tools in 2026 â€” Top 5 Reviewed & Compared',
+    metaTitle: 'Best AI Study Tools in 2026 "” Top 5 Reviewed & Compared',
     metaDescription:
       'Discover the 5 best AI study tools in 2026. We tested StudyBuddy, Anki, Quizlet, Notion AI, and Brainly to find the best options for flashcards, quizzes, and exam prep.',
     intro:
-      'The way students study is changing fast. AI study tools now generate flashcards, create quizzes, summarize textbooks, and build personalized study plans â€” all in seconds. But which tools are actually worth using? We spent weeks testing the top AI study tools to find the best options for every type of learner.',
+      'The way students study is changing fast. AI study tools now generate flashcards, create quizzes, summarize textbooks, and build personalized study plans "” all in seconds. But which tools are actually worth using? We spent weeks testing the top AI study tools to find the best options for every type of learner.',
     buyingGuide:
-      'When choosing an AI study tool, consider these key factors: **AI capabilities** (does it generate content or just organize it?), **study methods** (flashcards, quizzes, summaries, spaced repetition), **ease of use** (can you start studying in minutes?), **platform support** (mobile, desktop, web), and **pricing** (free tier generosity and premium value). The best tool for you depends on your study style â€” some students prefer structured flashcard systems, while others want AI to handle everything.',
+      'When choosing an AI study tool, consider these key factors: **AI capabilities** (does it generate content or just organize it?), **study methods** (flashcards, quizzes, summaries, spaced repetition), **ease of use** (can you start studying in minutes?), **platform support** (mobile, desktop, web), and **pricing** (free tier generosity and premium value). The best tool for you depends on your study style "” some students prefer structured flashcard systems, while others want AI to handle everything.',
     tools: [
       {
         name: 'StudyBuddy',
         slug: 'studybuddy',
         description:
-          'StudyBuddy is our top pick for AI-powered studying. Upload any document â€” PDF, notes, textbook photos â€” and its AI instantly generates flashcards, quizzes, summaries, and a personalized study plan. The spaced repetition system ensures you review at optimal intervals for maximum retention.',
+          'StudyBuddy is our top pick for AI-powered studying. Upload any document "” PDF, notes, textbook photos "” and its AI instantly generates flashcards, quizzes, summaries, and a personalized study plan. The spaced repetition system ensures you review at optimal intervals for maximum retention.',
         pros: [
           'AI generates flashcards, quizzes & summaries from any document',
           'Smart study plans adapt to your progress and weak areas',
@@ -53,7 +53,7 @@ export const bestPages: BestPage[] = [
         ],
         cons: [
           'Requires internet for AI features',
-          'Newer platform â€” community is still growing',
+          'Newer platform "” community is still growing',
           'Some advanced features require premium',
         ],
         bestFor: 'Students who want AI to do the heavy lifting of creating study materials automatically.',
@@ -67,7 +67,7 @@ export const bestPages: BestPage[] = [
         name: 'Anki',
         slug: 'anki',
         description:
-          'Anki is the gold standard for spaced repetition flashcards. It\'s free, open-source, and has a massive community with thousands of pre-made decks. The trade-off is a steep learning curve and no AI features â€” you create every card manually.',
+          'Anki is the gold standard for spaced repetition flashcards. It\'s free, open-source, and has a massive community with thousands of pre-made decks. The trade-off is a steep learning curve and no AI features "” you create every card manually.',
         pros: [
           'Free and open-source (desktop & Android)',
           'Best-in-class spaced repetition algorithm (SM-2)',
@@ -77,7 +77,7 @@ export const bestPages: BestPage[] = [
         ],
         cons: [
           'Steep learning curve for beginners',
-          'No AI â€” all cards must be created manually',
+          'No AI "” all cards must be created manually',
           'Dated, unintuitive interface',
           'iOS app costs $24.99',
           'Plugin management can be confusing',
@@ -105,7 +105,7 @@ export const bestPages: BestPage[] = [
           'Best features locked behind $7.99/month subscription',
           'AI features less powerful than dedicated AI study tools',
           'Ads in the free tier can be distracting',
-          'No document import â€” manual creation or search only',
+          'No document import "” manual creation or search only',
           'Study set quality varies wildly',
         ],
         bestFor: 'Students who want access to a massive library of pre-made study materials and social study features.',
@@ -131,7 +131,7 @@ export const bestPages: BestPage[] = [
           'Not purpose-built for active studying or exam prep',
           'No flashcards, quizzes, or spaced repetition',
           'AI add-on costs $10/month extra',
-          'Can be overwhelming â€” steep learning curve',
+          'Can be overwhelming "” steep learning curve',
           'Overkill for simple study needs',
         ],
         bestFor: 'Students who need a full productivity workspace for notes, projects, and writing with AI assistance.',
@@ -154,7 +154,7 @@ export const bestPages: BestPage[] = [
           'Free to use with ads',
         ],
         cons: [
-          'Not a study tool â€” more of a homework Q&A platform',
+          'Not a study tool "” more of a homework Q&A platform',
           'Answer quality varies (community-sourced)',
           'Heavy ads in the free version',
           'No flashcards, quizzes, or study planning',
@@ -177,7 +177,7 @@ export const bestPages: BestPage[] = [
       {
         question: 'Are AI study tools worth paying for?',
         answer:
-          'Yes â€” the time savings alone make premium AI study tools worthwhile. Tools like StudyBuddy can generate in seconds what would take hours to create manually. Even Anki, which is free, requires significant time investment to create cards. The ROI on a study tool subscription is excellent when you factor in time saved and improved grades.',
+          'Yes "” the time savings alone make premium AI study tools worthwhile. Tools like StudyBuddy can generate in seconds what would take hours to create manually. Even Anki, which is free, requires significant time investment to create cards. The ROI on a study tool subscription is excellent when you factor in time saved and improved grades.',
       },
       {
         question: 'Can AI study tools replace a tutor?',
@@ -192,7 +192,7 @@ export const bestPages: BestPage[] = [
       {
         question: 'How do AI study tools actually work?',
         answer:
-          'AI study tools use natural language processing (NLP) and large language models to analyze your study materials â€” PDFs, notes, textbook photos â€” and extract key concepts. They then generate flashcards, quizzes, and summaries based on that analysis. The best tools also implement spaced repetition algorithms to schedule your review sessions at scientifically optimal intervals for long-term retention.',
+          'AI study tools use natural language processing (NLP) and large language models to analyze your study materials "” PDFs, notes, textbook photos "” and extract key concepts. They then generate flashcards, quizzes, and summaries based on that analysis. The best tools also implement spaced repetition algorithms to schedule your review sessions at scientifically optimal intervals for long-term retention.',
       },
       {
         question: 'Are AI study tools good for medical school?',
@@ -207,7 +207,7 @@ export const bestPages: BestPage[] = [
     slug: 'voice-to-text-apps',
     categorySlug: 'voice-to-text-apps',
     title: 'Best Voice-to-Text Apps',
-    metaTitle: 'Best Voice-to-Text Apps in 2026 â€” Top 5 Tested & Ranked',
+    metaTitle: 'Best Voice-to-Text Apps in 2026 "” Top 5 Tested & Ranked',
     metaDescription:
       'We tested the top voice-to-text apps in 2026. Compare VoiceScribe AI, Otter.ai, Whisper, Google Speech-to-Text, and Speechify for accuracy, speed, and price.',
     intro:
@@ -225,11 +225,11 @@ export const bestPages: BestPage[] = [
           'Clean, intuitive mobile interface',
           'Speaker identification out of the box',
           'Multiple export formats (TXT, DOCX, SRT)',
-          'Generous free tier â€” more than Otter',
+          'Generous free tier "” more than Otter',
           'Fast real-time transcription display',
         ],
         cons: [
-          'Mobile-focused â€” no dedicated desktop app yet',
+          'Mobile-focused "” no dedicated desktop app yet',
           'Fewer third-party integrations than Otter',
           'No auto-join for video calls',
         ],
@@ -253,7 +253,7 @@ export const bestPages: BestPage[] = [
           'Action item extraction and summaries',
         ],
         cons: [
-          'Expensive â€” $16.99/month minimum for useful features',
+          'Expensive "” $16.99/month minimum for useful features',
           'Free tier limited to 300 minutes/month',
           'Accuracy drops with accents and background noise',
           'Privacy concerns with auto-join features',
@@ -270,7 +270,7 @@ export const bestPages: BestPage[] = [
         name: 'OpenAI Whisper',
         slug: 'whisper',
         description:
-          'Whisper is OpenAI\'s open-source speech recognition model. It\'s incredibly accurate and supports 99+ languages, but it\'s a developer tool â€” not a consumer app. You need technical knowledge to use it effectively.',
+          'Whisper is OpenAI\'s open-source speech recognition model. It\'s incredibly accurate and supports 99+ languages, but it\'s a developer tool "” not a consumer app. You need technical knowledge to use it effectively.',
         pros: [
           'State-of-the-art accuracy across languages',
           'Supports 99+ languages natively',
@@ -279,7 +279,7 @@ export const bestPages: BestPage[] = [
           'Multiple model sizes for different hardware',
         ],
         cons: [
-          'Not a consumer app â€” requires technical setup',
+          'Not a consumer app "” requires technical setup',
           'Needs powerful hardware for larger models',
           'No real-time transcription (batch processing only)',
           'No built-in speaker identification',
@@ -296,7 +296,7 @@ export const bestPages: BestPage[] = [
         name: 'Google Speech-to-Text',
         slug: 'google-stt',
         description:
-          'Google\'s cloud speech recognition API powers many apps and services. It\'s highly accurate and scalable, but it\'s an API service â€” best for developers building voice features into their own products.',
+          'Google\'s cloud speech recognition API powers many apps and services. It\'s highly accurate and scalable, but it\'s an API service "” best for developers building voice features into their own products.',
         pros: [
           'Excellent accuracy backed by Google\'s AI',
           'Supports 125+ languages and variants',
@@ -305,7 +305,7 @@ export const bestPages: BestPage[] = [
           'Automatic punctuation and formatting',
         ],
         cons: [
-          'API-only â€” no consumer app',
+          'API-only "” no consumer app',
           'Pay-per-use pricing can get expensive',
           'Requires Google Cloud account and setup',
           'Data sent to Google servers',
@@ -331,7 +331,7 @@ export const bestPages: BestPage[] = [
           'OCR for scanning printed text',
         ],
         cons: [
-          'Transcription is a secondary feature â€” not the focus',
+          'Transcription is a secondary feature "” not the focus',
           'Expensive premium ($139/year)',
           'Voice-to-text accuracy lags behind dedicated tools',
           'Best features require premium subscription',
@@ -374,7 +374,7 @@ export const bestPages: BestPage[] = [
       {
         question: 'What is the difference between voice-to-text and dictation software?',
         answer:
-          'Voice-to-text (transcription) apps like VoiceScribe AI are designed to record audio and convert it to text â€” ideal for meetings, lectures, and interviews. Dictation software like ScribAI is designed for real-time voice typing â€” you speak and text appears instantly in your active app. Some users benefit from both: ScribAI for desktop typing and VoiceScribe AI for mobile recording.',
+          'Voice-to-text (transcription) apps like VoiceScribe AI are designed to record audio and convert it to text "” ideal for meetings, lectures, and interviews. Dictation software like ScribAI is designed for real-time voice typing "” you speak and text appears instantly in your active app. Some users benefit from both: ScribAI for desktop typing and VoiceScribe AI for mobile recording.',
       },
     ],
     relatedComparisons: ['voicescribe-vs-otter', 'scribai-vs-voicescribe', 'voicescribe-vs-google-docs-voice-typing'],
@@ -384,7 +384,7 @@ export const bestPages: BestPage[] = [
     slug: 'dictation-software',
     categorySlug: 'dictation-software',
     title: 'Best Dictation Software',
-    metaTitle: 'Best Dictation Software in 2026 â€” Top 5 for Windows, Mac & Web',
+    metaTitle: 'Best Dictation Software in 2026 "” Top 5 for Windows, Mac & Web',
     metaDescription:
       'Find the best dictation software in 2026. We compare ScribAI, Dragon NaturallySpeaking, Google Voice Typing, Apple Dictation, and Windows Voice Typing for speed and accuracy.',
     intro:
@@ -399,15 +399,15 @@ export const bestPages: BestPage[] = [
           'ScribAI is purpose-built for Windows dictation with a focus on speed, accuracy, and working seamlessly in any application. Speak naturally and watch your words appear in real-time in any text field across your PC.',
         pros: [
           'Works system-wide in any Windows application',
-          'Extremely low latency â€” text appears instantly',
+          'Extremely low latency "” text appears instantly',
           'High accuracy with custom vocabulary support',
           'Voice commands for punctuation and formatting',
           'Lightweight and non-intrusive',
           'Designed specifically for desktop productivity',
         ],
         cons: [
-          'Windows only â€” no Mac or Linux support',
-          'Focused on dictation â€” not long-form transcription',
+          'Windows only "” no Mac or Linux support',
+          'Focused on dictation "” not long-form transcription',
           'Requires a decent microphone for best results',
         ],
         bestFor: 'Windows users who want fast, accurate voice dictation that works in every application.',
@@ -432,9 +432,9 @@ export const bestPages: BestPage[] = [
         cons: [
           'Very expensive ($699 for Professional)',
           'Dated interface and user experience',
-          'Resource-heavy â€” can slow down older PCs',
+          'Resource-heavy "” can slow down older PCs',
           'No modern AI features',
-          'Consumer version discontinued â€” only Professional remains',
+          'Consumer version discontinued "” only Professional remains',
         ],
         bestFor: 'Legal, medical, and business professionals who need industry-specific accuracy and can justify the cost.',
         url: 'https://www.nuance.com/dragon.html',
@@ -449,14 +449,14 @@ export const bestPages: BestPage[] = [
         description:
           'Google Docs has a free built-in voice typing feature that works surprisingly well for basic dictation. It\'s limited to Google Docs and Chrome browser, but it\'s free and requires zero setup.',
         pros: [
-          'Completely free â€” no subscription needed',
-          'Zero setup â€” just open Google Docs and go',
+          'Completely free "” no subscription needed',
+          'Zero setup "” just open Google Docs and go',
           'Good accuracy powered by Google\'s speech AI',
           'Supports 100+ languages',
           'Works on any OS via Chrome browser',
         ],
         cons: [
-          'Only works in Google Docs â€” not system-wide',
+          'Only works in Google Docs "” not system-wide',
           'Requires Chrome browser and internet connection',
           'Limited voice commands',
           'No custom vocabulary',
@@ -475,14 +475,14 @@ export const bestPages: BestPage[] = [
         description:
           'Apple\'s built-in dictation is available on Mac, iPhone, and iPad. It\'s gotten significantly better with on-device AI processing and supports auto-punctuation and emoji dictation.',
         pros: [
-          'Built into every Apple device â€” no extra install',
+          'Built into every Apple device "” no extra install',
           'On-device processing for privacy',
           'Auto-punctuation works well',
           'Emoji dictation is a fun bonus',
           'Seamless integration with Apple ecosystem',
         ],
         cons: [
-          'Apple ecosystem only â€” no Windows or Android',
+          'Apple ecosystem only "” no Windows or Android',
           'Not as accurate as dedicated dictation tools',
           'Limited voice commands compared to Dragon or ScribAI',
           'No custom vocabulary support',
@@ -531,7 +531,7 @@ export const bestPages: BestPage[] = [
       {
         question: 'Is dictation software accurate enough for professional use?',
         answer:
-          'Yes â€” modern dictation software like ScribAI and Dragon can achieve 95-99% accuracy with clear audio and a good microphone. Custom vocabulary features further improve accuracy for specialized terminology.',
+          'Yes "” modern dictation software like ScribAI and Dragon can achieve 95-99% accuracy with clear audio and a good microphone. Custom vocabulary features further improve accuracy for specialized terminology.',
       },
       {
         question: 'Can I use dictation software for coding?',
@@ -546,7 +546,7 @@ export const bestPages: BestPage[] = [
       {
         question: 'Is dictation faster than typing?',
         answer:
-          'Most people speak at 125-150 words per minute and type at 40-80 WPM. With good dictation software like ScribAI, effective dictation speed (including corrections) is typically 80-120 WPM â€” faster than most typists. The speed advantage grows over time as you learn voice commands and the software adapts to your voice.',
+          'Most people speak at 125-150 words per minute and type at 40-80 WPM. With good dictation software like ScribAI, effective dictation speed (including corrections) is typically 80-120 WPM "” faster than most typists. The speed advantage grows over time as you learn voice commands and the software adapts to your voice.',
       },
       {
         question: 'Can dictation software work offline?',
@@ -561,7 +561,7 @@ export const bestPages: BestPage[] = [
     slug: 'muslim-apps',
     categorySlug: 'muslim-apps',
     title: 'Best Muslim Apps',
-    metaTitle: 'Best Muslim Apps in 2026 â€” Prayer Times, Quran, Dua & More',
+    metaTitle: 'Best Muslim Apps in 2026 "” Prayer Times, Quran, Dua & More',
     metaDescription:
       'Discover the 5 best Muslim apps in 2026. Compare Noor, Muslim Pro, Quran.com, Athan, and Islamic Finder for prayer times, Quran reading, dua, and Islamic lifestyle features.',
     intro:
@@ -570,10 +570,10 @@ export const bestPages: BestPage[] = [
       'When choosing a Muslim app, consider: **Prayer time accuracy** (calculation methods and location precision), **Quran features** (translations, tafsir, audio recitations), **dua/dhikr collections** (comprehensiveness and sourcing), **additional features** (Qibla, Islamic calendar, community), **offline access** (essential for travel), and **design quality** (clean UI makes daily use pleasant).',
     tools: [
       {
-        name: 'Noor â€” Muslim Friend',
+        name: 'Noor "” Muslim Friend',
         slug: 'noor',
         description:
-          'Noor (Muslim Friend) is a beautifully designed, all-in-one Islamic lifestyle app. It combines accurate prayer times, full Quran with translations, extensive dua collections, dhikr counters, Qibla compass, and Islamic calendar â€” all in a clean, modern interface.',
+          'Noor (Muslim Friend) is a beautifully designed, all-in-one Islamic lifestyle app. It combines accurate prayer times, full Quran with translations, extensive dua collections, dhikr counters, Qibla compass, and Islamic calendar "” all in a clean, modern interface.',
         pros: [
           'Beautiful, modern design that\'s a joy to use daily',
           'Accurate prayer times with multiple calculation methods',
@@ -583,7 +583,7 @@ export const bestPages: BestPage[] = [
           'Daily reminders and notifications',
         ],
         cons: [
-          'Newer app â€” community features still growing',
+          'Newer app "” community features still growing',
           'Some features require premium',
           'Currently focused on mobile',
         ],
@@ -600,7 +600,7 @@ export const bestPages: BestPage[] = [
         description:
           'Muslim Pro is one of the most downloaded Islamic apps with over 100 million users. It covers prayer times, Quran, Qibla, nearby mosques, and halal restaurants. However, it has faced privacy controversies.',
         pros: [
-          'Huge user base â€” over 100 million downloads',
+          'Huge user base "” over 100 million downloads',
           'Comprehensive feature set covering most needs',
           'Nearby mosque and halal restaurant finder',
           'Multiple Quran reciters and translations',
@@ -626,14 +626,14 @@ export const bestPages: BestPage[] = [
         description:
           'Quran.com is a free, open-source project focused purely on Quran reading. Their app offers a clean reading experience with multiple translations, tafsir, and beautiful recitations. It\'s the best for dedicated Quran study.',
         pros: [
-          'Completely free â€” no premium or ads',
+          'Completely free "” no premium or ads',
           'Excellent Quran reading experience',
           'Multiple translations and tafsir (commentary)',
           'Beautiful audio recitations by top Qaris',
           'Open-source and community-supported',
         ],
         cons: [
-          'Quran-only â€” no prayer times, dua, or other features',
+          'Quran-only "” no prayer times, dua, or other features',
           'Limited offline capabilities',
           'No dhikr counter or Islamic calendar',
           'Fewer features than all-in-one apps',
