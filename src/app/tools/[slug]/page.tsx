@@ -10,6 +10,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import StarRating from '@/components/StarRating';
 import { AdPlaceholder } from '@/components/AdSense';
 
+// Only serve pre-rendered tool review pages; unknown slugs return 404
+export const dynamicParams = false;
+
 interface PageProps {
   params: { slug: string };
 }

@@ -4,6 +4,9 @@ import { getBestPageBySlug, getAllBestPageSlugs } from '@/data/best-pages';
 import { BestPageTemplate } from '@/templates';
 import { buildMetadata } from '@/lib/metadata';
 
+// Only serve pre-rendered best-page slugs; unknown slugs return 404
+export const dynamicParams = false;
+
 interface PageProps {
   params: { slug: string };
 }

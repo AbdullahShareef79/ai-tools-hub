@@ -1,17 +1,19 @@
 import { MetadataRoute } from 'next';
-import { categories } from '@/data/categories';
-import { comparisons } from '@/data/comparisons';
+import { getAllComparisonSlugs } from '@/data/comparisons';
 import { blogPosts } from '@/data/blog-posts';
 import { bestPages, getAllUniqueToolSlugs } from '@/data/best-pages';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-tools-hub-beryl.vercel.app';
 
+// Cache the sitemap for 24 hours
+export const revalidate = 86400;
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date().toISOString();
+  const now = new Date();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${SITE_URL}/`, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${SITE_URL}/categories`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/tools`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
@@ -21,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
   ];
 
-  // Best (category) pages
+  // Best (category) pages — deduplicated from source
   const bestPageUrls: MetadataRoute.Sitemap = bestPages.map((page) => ({
     url: `${SITE_URL}/best/${page.slug}`,
     lastModified: now,
@@ -29,23 +31,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Comparison pages
-  const comparisonUrls: MetadataRoute.Sitemap = comparisons.map((c) => ({
-    url: `${SITE_URL}/compare/${c.slug}`,
+  // Comparison pages — getAllComparisonSlugs() already deduplicates
+  const comparisonUrls: MetadataRoute.Sitemap = getAllComparisonSlugs().map((slug) => ({
+    url: `${SITE_URL}/compare/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
 
-  // Blog posts
+  // Blog posts — use actual updated dates as Date objects
   const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
-    lastModified: post.updatedAt,
+    lastModified: new Date(post.updatedAt),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
-  // Individual tool review pages
+  // Individual tool review pages — getAllUniqueToolSlugs() already deduplicates
   const toolUrls: MetadataRoute.Sitemap = getAllUniqueToolSlugs().map((slug) => ({
     url: `${SITE_URL}/tools/${slug}`,
     lastModified: now,

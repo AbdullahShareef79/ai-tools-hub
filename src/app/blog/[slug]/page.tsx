@@ -4,6 +4,9 @@ import { getBlogPostBySlug, getAllBlogSlugs, blogPosts } from '@/data/blog-posts
 import { BlogPostTemplate } from '@/templates';
 import { buildMetadata } from '@/lib/metadata';
 
+// Only serve pre-rendered blog posts; unknown slugs return 404
+export const dynamicParams = false;
+
 interface PageProps {
   params: { slug: string };
 }

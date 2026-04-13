@@ -4,6 +4,9 @@ import { getComparisonBySlug, getAllComparisonSlugs } from '@/data/comparisons';
 import { ComparePageTemplate } from '@/templates';
 import { buildMetadata } from '@/lib/metadata';
 
+// Only serve pre-rendered comparison pages; unknown slugs return 404
+export const dynamicParams = false;
+
 interface PageProps {
   params: { slug: string };
 }
