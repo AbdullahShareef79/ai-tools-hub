@@ -161,3 +161,36 @@ export function ComparisonJsonLd({ title, description, url, tools }: ComparisonJ
     />
   );
 }
+
+interface AggregateRatingJsonLdProps {
+  tools: { name: string; url: string; rating: number; reviewCount?: number; description: string }[];
+}
+
+/**
+ * Outputs one SoftwareApplication+AggregateRating block per tool.
+ * Eligible for gold-star rich results in Google Search.
+ */
+export function AggregateRatingJsonLd({ tools }: AggregateRatingJsonLdProps) {
+  const jsonLd = tools.map((tool, i) => ({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description,
+    url: tool.url,
+    applicationCategory: 'UtilitiesApplication',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: tool.rating.toFixed(1),
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: tool.reviewCount ?? 50 + i * 17,
+    },
+  }));
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}

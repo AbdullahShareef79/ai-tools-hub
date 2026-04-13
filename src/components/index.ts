@@ -41,6 +41,7 @@ export {
   FAQJsonLd,
   BreadcrumbJsonLd,
   ComparisonJsonLd,
+  AggregateRatingJsonLd,
 } from './JsonLd';
 
 // ─── Type re-exports for data contracts ─────────────────────────

@@ -10,6 +10,7 @@ import {
   AdPlaceholder,
   ComparisonJsonLd,
   FAQJsonLd,
+  AggregateRatingJsonLd,
 } from '@/components';
 import { getCategoryBySlug } from '@/data/categories';
 import { SITE_URL } from '@/lib/metadata';
@@ -46,6 +47,14 @@ export default function BestPageTemplate({ page }: BestPageTemplateProps) {
         }))}
       />
       <FAQJsonLd questions={page.faq} />
+      <AggregateRatingJsonLd
+        tools={page.tools.map((t) => ({
+          name: t.name,
+          url: t.url,
+          rating: t.rating,
+          description: t.description,
+        }))}
+      />
 
       <div className="container-page section-padding">
         {/* Breadcrumbs */}

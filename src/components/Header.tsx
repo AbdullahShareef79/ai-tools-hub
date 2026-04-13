@@ -33,6 +33,7 @@ const navigation = [
     ],
   },
   { name: 'Blog', href: '/blog' },
+  { name: 'All Tools', href: '/tools' },
 ];
 
 export default function Header() {
