@@ -325,11 +325,14 @@ export default function HomePage() {
               New reviews, comparisons, and recommendations — straight to your inbox. No spam, ever.
             </p>
             <form
-              action="https://formspree.io/f/placeholder"
+              action="https://formsubmit.co/abdullahshareef7945512@gmail.com"
               method="POST"
               className="mt-6 flex flex-col items-center gap-3 sm:flex-row"
               aria-label="Newsletter signup"
             >
+              <input type="hidden" name="_subject" value="New newsletter subscriber — AI Tools Hub" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" className="hidden" />
               <label htmlFor="newsletter-email" className="sr-only">Email address</label>
               <input
                 id="newsletter-email"

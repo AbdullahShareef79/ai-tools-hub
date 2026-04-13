@@ -65,6 +65,15 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
             <h1 className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl">
               {post.title}
             </h1>
+
+            {post.updatedAt && post.updatedAt !== post.publishedAt && (
+              <p className="mt-3 text-sm text-slate-500">
+                🔄 Last updated:{' '}
+                <time dateTime={post.updatedAt}>
+                  {new Date(post.updatedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </p>
+            )}
           </header>
 
           <AdPlaceholder label="Ad Placement — Article Top" />

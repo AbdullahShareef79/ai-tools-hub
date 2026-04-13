@@ -25,7 +25,7 @@ export default function ContactPage() {
 
         <div className="mt-10 card">
           <form
-            action="https://formsubmit.co/your-email@example.com"
+            action="https://formsubmit.co/abdullahshareef7945512@gmail.com"
             method="POST"
             className="space-y-6"
           >
