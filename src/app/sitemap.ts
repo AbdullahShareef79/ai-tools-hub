@@ -3,7 +3,11 @@ import { getAllComparisonSlugs } from '@/data/comparisons';
 import { blogPosts } from '@/data/blog-posts';
 import { bestPages, getAllUniqueToolSlugs } from '@/data/best-pages';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-tools-hub-beryl.vercel.app';
+// VERCEL_URL is auto-injected by Vercel and always matches the actual deployment domain.
+// NEXT_PUBLIC_SITE_URL takes precedence when explicitly set to a custom/production domain.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ai-tools-hub-beryl.vercel.app');
 
 // Cache the sitemap for 24 hours
 export const revalidate = 86400;

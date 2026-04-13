@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-tools-hub-beryl.vercel.app';
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ai-tools-hub-beryl.vercel.app');
 const SITE_NAME = 'AI Tools Hub';
 const DEFAULT_DESCRIPTION =
   'Discover, compare, and choose the best AI tools for studying, voice-to-text, dictation, and more. Honest reviews, detailed comparisons, and expert recommendations.';
-const DEFAULT_OG_IMAGE = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-tools-hub-beryl.vercel.app'}/og-image.png`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export function buildMetadata({
   title,
