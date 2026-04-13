@@ -86,6 +86,27 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
 
           <AdPlaceholder label="Ad Placement — Article Bottom" />
 
+          {/* Social sharing */}
+          <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-slate-200 pt-6">
+            <span className="text-sm font-medium text-slate-600">Found this helpful? Share it:</span>
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`${SITE_URL}/blog/${post.slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              𝕏 Share on X
+            </a>
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${SITE_URL}/blog/${post.slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors"
+            >
+              in LinkedIn
+            </a>
+          </div>
+
           {/* Related best pages */}
           {post.relatedBestPages.length > 0 && (
             <div className="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-6">

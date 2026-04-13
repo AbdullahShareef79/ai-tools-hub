@@ -1269,6 +1269,46 @@ export function getBestPageBySlug(slug: string): BestPage | undefined {
   return bestPages.find((p) => p.slug === slug);
 }
 
+export interface ToolWithContext extends ToolListing {
+  bestPageSlug: string;
+  bestPageTitle: string;
+  categorySlug: string;
+  /** Other tools from the same best-page (excluding self) */
+  relatedTools: ToolListing[];
+}
+
+/** Returns the first occurrence of a tool by its slug, with page context. */
+export function getToolBySlug(slug: string): ToolWithContext | undefined {
+  for (const page of bestPages) {
+    const tool = page.tools.find((t) => t.slug === slug);
+    if (tool) {
+      return {
+        ...tool,
+        bestPageSlug: page.slug,
+        bestPageTitle: page.title,
+        categorySlug: page.categorySlug,
+        relatedTools: page.tools.filter((t) => t.slug !== slug).slice(0, 4),
+      };
+    }
+  }
+  return undefined;
+}
+
+/** Returns all unique tool slugs across all best-pages (deduped by first occurrence). */
+export function getAllUniqueToolSlugs(): string[] {
+  const seen = new Set<string>();
+  const slugs: string[] = [];
+  for (const page of bestPages) {
+    for (const tool of page.tools) {
+      if (!seen.has(tool.slug)) {
+        seen.add(tool.slug);
+        slugs.push(tool.slug);
+      }
+    }
+  }
+  return slugs;
+}
+
 export function getAllBestPageSlugs(): string[] {
   return bestPages.map((p) => p.slug);
 }

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { categories } from '@/data/categories';
 import { comparisons } from '@/data/comparisons';
 import { blogPosts } from '@/data/blog-posts';
-import { bestPages } from '@/data/best-pages';
+import { bestPages, getAllUniqueToolSlugs } from '@/data/best-pages';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-tools-hub-beryl.vercel.app';
 
@@ -45,5 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...bestPageUrls, ...comparisonUrls, ...blogUrls];
+  // Individual tool review pages
+  const toolUrls: MetadataRoute.Sitemap = getAllUniqueToolSlugs().map((slug) => ({
+    url: `${SITE_URL}/tools/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...bestPageUrls, ...comparisonUrls, ...blogUrls, ...toolUrls];
 }
