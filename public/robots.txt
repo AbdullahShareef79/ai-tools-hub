@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ai-tools-hub-beryl.vercel.app/sitemap.xml
