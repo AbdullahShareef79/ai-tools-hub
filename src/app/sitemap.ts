@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       toolSlugs.add(tool.slug);
     }
   }
-  const toolEntries: MetadataRoute.Sitemap = [...toolSlugs].map((slug) => ({
+  const toolEntries: MetadataRoute.Sitemap = Array.from(toolSlugs).map((slug) => ({
     url: `${SITE_URL}/tools/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly',
