@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
+import { isAdSenseEnabled } from '@/lib/adsense';
 
 const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-8689475230104463';
@@ -10,10 +11,7 @@ const ADSENSE_CLIENT_ID =
 /** Pages where ads should NOT be shown */
 const NO_AD_PATHS = ['/privacy', '/terms', '/contact', '/about'];
 
-/** Returns true when AdSense is properly configured */
-export function isAdSenseEnabled(): boolean {
-  return !!ADSENSE_CLIENT_ID && !ADSENSE_CLIENT_ID.includes('XXXX');
-}
+export { isAdSenseEnabled };
 
 /* ─── Global Script ────────────────────────────────────────────── */
 

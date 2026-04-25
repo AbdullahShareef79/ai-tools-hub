@@ -4,7 +4,8 @@ import { comparisons } from '@/data/comparisons';
 import CategoryCard from '@/components/CategoryCard';
 import ComparisonCard from '@/components/ComparisonCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { AdUnit, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
+import { AdUnit, AdPlaceholder } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = buildMetadata({

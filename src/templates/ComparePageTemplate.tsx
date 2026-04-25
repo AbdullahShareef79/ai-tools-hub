@@ -15,7 +15,7 @@ import {
   ComparisonJsonLd,
   BreadcrumbJsonLd,
 } from '@/components';
-import { isAdSenseEnabled } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 import { SITE_URL } from '@/lib/metadata';
 import type { Comparison } from '@/data/comparisons';
 

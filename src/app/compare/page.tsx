@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { comparisons } from '@/data/comparisons';
 import ComparisonCard from '@/components/ComparisonCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { AdUnit, MultiplexAd, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
+import { AdUnit, MultiplexAd, AdPlaceholder } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { buildMetadata, SITE_URL } from '@/lib/metadata';
 

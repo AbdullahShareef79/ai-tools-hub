@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { blogPosts } from '@/data/blog-posts';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { AdUnit, MultiplexAd, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
+import { AdUnit, MultiplexAd, AdPlaceholder } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = buildMetadata({

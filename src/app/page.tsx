@@ -7,7 +7,8 @@ import CategoryCard from '@/components/CategoryCard';
 import ComparisonCard from '@/components/ComparisonCard';
 import ToolCard from '@/components/ToolCard';
 import { WebSiteJsonLd, OrganizationJsonLd } from '@/components/JsonLd';
-import { AdUnit, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
+import { AdUnit, AdPlaceholder } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 
 export default function HomePage() {
   return (

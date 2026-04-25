@@ -12,7 +12,7 @@ import {
   ArticleJsonLd,
   BreadcrumbJsonLd,
 } from '@/components';
-import { isAdSenseEnabled } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 import { SITE_URL } from '@/lib/metadata';
 import { getCategoryBySlug } from '@/data/categories';
 import type { BlogPost } from '@/data/blog-posts';

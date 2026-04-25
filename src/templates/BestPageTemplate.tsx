@@ -16,7 +16,7 @@ import {
   AggregateRatingJsonLd,
   BreadcrumbJsonLd,
 } from '@/components';
-import { isAdSenseEnabled } from '@/components/AdSense';
+import { isAdSenseEnabled } from '@/lib/adsense';
 import { getCategoryBySlug } from '@/data/categories';
 import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL } from '@/lib/metadata';
