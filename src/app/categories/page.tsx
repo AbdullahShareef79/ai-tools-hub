@@ -4,7 +4,7 @@ import { comparisons } from '@/data/comparisons';
 import CategoryCard from '@/components/CategoryCard';
 import ComparisonCard from '@/components/ComparisonCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { AdPlaceholder } from '@/components/AdSense';
+import { AdUnit, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = buildMetadata({
@@ -42,7 +42,11 @@ export default function CategoriesPage() {
         ))}
       </div>
 
-      <AdPlaceholder label="Ad Placement — Categories Mid-Page" />
+      {isAdSenseEnabled() ? (
+        <AdUnit slot="6789012345" format="horizontal" className="my-10" />
+      ) : (
+        <AdPlaceholder label="Ad Placement — Categories Mid-Page" />
+      )}
 
       {/* Comparisons Section */}
       <div className="mt-16">

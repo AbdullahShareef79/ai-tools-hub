@@ -5,13 +5,25 @@ import {
   RelatedComparisons,
   RelatedCategories,
   RelatedArticles,
+  AdUnit,
+  InArticleAd,
+  MultiplexAd,
   AdPlaceholder,
   ArticleJsonLd,
+  BreadcrumbJsonLd,
 } from '@/components';
+import { isAdSenseEnabled } from '@/components/AdSense';
 import { SITE_URL } from '@/lib/metadata';
 import { getCategoryBySlug } from '@/data/categories';
 import type { BlogPost } from '@/data/blog-posts';
 import type { RelatedArticle } from '@/components';
+
+/** Ad slot IDs — replace with your actual AdSense slot IDs */
+const AD_SLOTS = {
+  articleTop: '2345678901',
+  articleMid: '2345678902',
+  articleBottom: '2345678903',
+};
 
 interface BlogPostTemplateProps {
   post: BlogPost;
@@ -61,6 +73,7 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
   const headings = extractHeadings(post.content);
   const contentWithIds = injectHeadingIds(post.content);
   const showToc = headings.length >= 3;
+  const adsEnabled = isAdSenseEnabled();
 
   return (
     <>
@@ -72,6 +85,14 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
         publishedTime={post.publishedAt}
         modifiedTime={post.updatedAt}
         author={post.author}
+        image={`${SITE_URL}/og-default.png`}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Blog', url: `${SITE_URL}/blog` },
+          { name: post.title, url: `${SITE_URL}/blog/${post.slug}` },
+        ]}
       />
 
       <div className="container-page section-padding">
@@ -107,7 +128,12 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
             )}
           </header>
 
-          <AdPlaceholder label="Ad Placement — Article Top" />
+          {/* Ad: After header — early engagement = high viewability */}
+          {adsEnabled ? (
+            <InArticleAd slot={AD_SLOTS.articleTop} className="my-8" />
+          ) : (
+            <AdPlaceholder label="Ad Placement — Article Top" />
+          )}
 
           {/* Table of Contents — shown when post has 3+ h2 headings */}
           {showToc && (
@@ -155,7 +181,12 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
             dangerouslySetInnerHTML={{ __html: contentWithIds }}
           />
 
-          <AdPlaceholder label="Ad Placement — Article Bottom" />
+          {/* Ad: After content — decision point for engaged readers */}
+          {adsEnabled ? (
+            <AdUnit slot={AD_SLOTS.articleMid} format="horizontal" className="my-10" />
+          ) : (
+            <AdPlaceholder label="Ad Placement — Article Bottom" />
+          )}
 
           {/* Social sharing */}
           <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-slate-200 pt-6">
@@ -204,6 +235,15 @@ export default function BlogPostTemplate({ post, relatedPosts = [] }: BlogPostTe
             <RelatedComparisons slugs={post.relatedComparisons} columns={2} />
           </div>
         </article>
+
+        {/* Multiplex ad: Content recommendations to drive pageviews */}
+        {adsEnabled ? (
+          <div className="mx-auto max-w-3xl">
+            <MultiplexAd slot={AD_SLOTS.articleBottom} className="my-10" />
+          </div>
+        ) : (
+          <AdPlaceholder label="Ad Placement — Article Multiplex (Recommendations)" />
+        )}
 
         {/* Related articles */}
         <div className="mx-auto mt-16 max-w-3xl">

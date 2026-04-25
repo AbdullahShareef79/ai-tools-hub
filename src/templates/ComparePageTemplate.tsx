@@ -8,11 +8,23 @@ import {
   FeatureTable,
   RelatedComparisons,
   RelatedCategories,
+  AdUnit,
+  InArticleAd,
+  MultiplexAd,
   AdPlaceholder,
   ComparisonJsonLd,
+  BreadcrumbJsonLd,
 } from '@/components';
+import { isAdSenseEnabled } from '@/components/AdSense';
 import { SITE_URL } from '@/lib/metadata';
 import type { Comparison } from '@/data/comparisons';
+
+/** Ad slot IDs — replace with your actual AdSense slot IDs */
+const AD_SLOTS = {
+  compareMid: '3456789012',
+  compareBottom: '3456789013',
+  compareMultiplex: '3456789014',
+};
 
 interface ComparePageTemplateProps {
   comparison: Comparison;
@@ -30,6 +42,7 @@ interface ComparePageTemplateProps {
  */
 export default function ComparePageTemplate({ comparison }: ComparePageTemplateProps) {
   const { toolA, toolB } = comparison;
+  const adsEnabled = isAdSenseEnabled();
 
   return (
     <>
@@ -43,12 +56,19 @@ export default function ComparePageTemplate({ comparison }: ComparePageTemplateP
           { name: toolB.name, rating: toolB.rating, description: toolB.description },
         ]}
       />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Compare', url: `${SITE_URL}/compare` },
+          { name: comparison.title, url: `${SITE_URL}/compare/${comparison.slug}` },
+        ]}
+      />
 
       <div className="container-page section-padding">
         {/* Breadcrumbs */}
         <Breadcrumbs
           items={[
-            { label: 'Compare', href: '/categories' },
+            { label: 'Compare', href: '/compare' },
             { label: comparison.title },
           ]}
         />
@@ -139,7 +159,12 @@ export default function ComparePageTemplate({ comparison }: ComparePageTemplateP
           </div>
         </div>
 
-        <AdPlaceholder label="Ad Placement — Comparison Mid-Page" />
+        {/* Ad: Between VS cards and feature table — high decision intent */}
+        {adsEnabled ? (
+          <InArticleAd slot={AD_SLOTS.compareMid} className="my-10" />
+        ) : (
+          <AdPlaceholder label="Ad Placement — Comparison Mid-Page" />
+        )}
 
         {/* Feature table */}
         <div className="mt-12">
@@ -162,7 +187,12 @@ export default function ComparePageTemplate({ comparison }: ComparePageTemplateP
           />
         </div>
 
-        <AdPlaceholder label="Ad Placement — Comparison Bottom" />
+        {/* Ad: After verdict — reader has made decision */}
+        {adsEnabled ? (
+          <AdUnit slot={AD_SLOTS.compareBottom} format="horizontal" className="my-10" />
+        ) : (
+          <AdPlaceholder label="Ad Placement — Comparison Bottom" />
+        )}
 
         {/* Related categories */}
         <div className="mt-12">
@@ -171,6 +201,13 @@ export default function ComparePageTemplate({ comparison }: ComparePageTemplateP
             variant="buttons"
           />
         </div>
+
+        {/* Multiplex ad: Drive to next comparison */}
+        {adsEnabled ? (
+          <MultiplexAd slot={AD_SLOTS.compareMultiplex} className="my-10" />
+        ) : (
+          <AdPlaceholder label="Ad Placement — Comparison Multiplex" />
+        )}
 
         {/* Related comparisons */}
         <div className="mt-12">

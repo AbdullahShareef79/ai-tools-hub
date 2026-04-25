@@ -37,6 +37,7 @@ export { AdSenseScript, AdUnit, InArticleAd, MultiplexAd, AdPlaceholder } from '
 // ─── JSON-LD Structured Data ────────────────────────────────────
 export {
   WebSiteJsonLd,
+  OrganizationJsonLd,
   ArticleJsonLd,
   FAQJsonLd,
   BreadcrumbJsonLd,

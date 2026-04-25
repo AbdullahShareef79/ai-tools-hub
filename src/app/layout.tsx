@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <AdSenseScript />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#4f46e5" />
       </head>
       <body className="flex min-h-screen flex-col font-sans antialiased">
         <a
@@ -34,6 +36,8 @@ export default function RootLayout({
         <Header />
         <main id="main-content" className="flex-grow">{children}</main>
         <Footer />
+        {/* AdSense loaded after page is interactive for better Core Web Vitals */}
+        <AdSenseScript />
       </body>
     </html>
   );

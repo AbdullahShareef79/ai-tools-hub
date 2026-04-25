@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { blogPosts } from '@/data/blog-posts';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { AdPlaceholder } from '@/components/AdSense';
+import { AdUnit, MultiplexAd, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = buildMetadata({
@@ -33,7 +33,11 @@ export default function BlogIndexPage() {
         </div>
       </header>
 
-      <AdPlaceholder label="Ad Placement — Blog Index Top" />
+      {isAdSenseEnabled() ? (
+        <AdUnit slot="5678901234" format="horizontal" className="my-8" />
+      ) : (
+        <AdPlaceholder label="Ad Placement — Blog Index Top" />
+      )}
 
       <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((post) => (
@@ -78,7 +82,11 @@ export default function BlogIndexPage() {
         ))}
       </div>
 
-      <AdPlaceholder label="Ad Placement — Blog Index Bottom" />
+      {isAdSenseEnabled() ? (
+        <MultiplexAd slot="5678901235" className="my-8" />
+      ) : (
+        <AdPlaceholder label="Ad Placement — Blog Index Bottom" />
+      )}
 
       {/* CTA for more content */}
       <div className="mx-auto mt-16 max-w-2xl text-center">

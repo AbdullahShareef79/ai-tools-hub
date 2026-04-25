@@ -6,13 +6,14 @@ import { blogPosts } from '@/data/blog-posts';
 import CategoryCard from '@/components/CategoryCard';
 import ComparisonCard from '@/components/ComparisonCard';
 import ToolCard from '@/components/ToolCard';
-import { WebSiteJsonLd } from '@/components/JsonLd';
-import { AdPlaceholder } from '@/components/AdSense';
+import { WebSiteJsonLd, OrganizationJsonLd } from '@/components/JsonLd';
+import { AdUnit, AdPlaceholder, isAdSenseEnabled } from '@/components/AdSense';
 
 export default function HomePage() {
   return (
     <>
       <WebSiteJsonLd />
+      <OrganizationJsonLd />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50" aria-label="Hero">
@@ -134,7 +135,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <AdPlaceholder label="Ad Placement — Homepage Mid-Page" />
+      {isAdSenseEnabled() ? (
+        <div className="container-page">
+          <AdUnit slot="4567890123" format="horizontal" className="my-10" />
+        </div>
+      ) : (
+        <AdPlaceholder label="Ad Placement — Homepage Mid-Page" />
+      )}
 
       {/* Comparisons Section */}
       <section className="section-padding bg-slate-50">

@@ -7,15 +7,27 @@ import {
   FAQAccordion,
   RelatedComparisons,
   RelatedCategories,
+  AdUnit,
+  InArticleAd,
+  MultiplexAd,
   AdPlaceholder,
   ComparisonJsonLd,
   FAQJsonLd,
   AggregateRatingJsonLd,
+  BreadcrumbJsonLd,
 } from '@/components';
+import { isAdSenseEnabled } from '@/components/AdSense';
 import { getCategoryBySlug } from '@/data/categories';
 import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL } from '@/lib/metadata';
 import type { BestPage } from '@/data/best-pages';
+
+/** Ad slot IDs — replace with your actual AdSense slot IDs */
+const AD_SLOTS = {
+  bestTop: '1234567890',
+  bestMid: '1234567891',
+  bestBottom: '1234567892',
+};
 
 interface BestPageTemplateProps {
   page: BestPage;
@@ -33,6 +45,7 @@ interface BestPageTemplateProps {
  */
 export default function BestPageTemplate({ page }: BestPageTemplateProps) {
   const category = getCategoryBySlug(page.categorySlug);
+  const adsEnabled = isAdSenseEnabled();
 
   // Blog posts topically linked to this best-page
   const relatedBlogPosts = blogPosts
@@ -60,6 +73,13 @@ export default function BestPageTemplate({ page }: BestPageTemplateProps) {
           rating: t.rating,
           description: t.description,
         }))}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'Categories', url: `${SITE_URL}/categories` },
+          { name: category?.name || page.title, url: `${SITE_URL}/best/${page.slug}` },
+        ]}
       />
 
       <div className="container-page section-padding">
@@ -116,15 +136,26 @@ export default function BestPageTemplate({ page }: BestPageTemplateProps) {
           </div>
         )}
 
-        <AdPlaceholder label="Ad Placement — Best Page Top" />
+        {/* Ad: After buying guide — high-intent readers */}
+        {adsEnabled ? (
+          <AdUnit slot={AD_SLOTS.bestTop} format="horizontal" className="my-10" />
+        ) : (
+          <AdPlaceholder label="Ad Placement — Best Page Top" />
+        )}
 
         {/* Tool rankings */}
         <div className="mx-auto mt-12 max-w-4xl space-y-12">
           {page.tools.map((tool, index) => (
             <div key={tool.slug}>
               <ToolRankingCard tool={tool} rank={index + 1} />
-              {/* Ad after 2nd tool */}
-              {index === 1 && <AdPlaceholder label="Ad Placement — Best Page Mid" />}
+              {/* In-article ad after 2nd tool — blends with content */}
+              {index === 1 && (
+                adsEnabled ? (
+                  <InArticleAd slot={AD_SLOTS.bestMid} className="my-10" />
+                ) : (
+                  <AdPlaceholder label="Ad Placement — Best Page Mid" />
+                )
+              )}
             </div>
           ))}
         </div>
@@ -133,6 +164,13 @@ export default function BestPageTemplate({ page }: BestPageTemplateProps) {
         <div className="mt-16">
           <FAQAccordion items={page.faq} includeJsonLd={false} />
         </div>
+
+        {/* Multiplex ad: After FAQ — catch readers before they leave */}
+        {adsEnabled ? (
+          <MultiplexAd slot={AD_SLOTS.bestBottom} className="my-10" />
+        ) : (
+          <AdPlaceholder label="Ad Placement — Best Page Bottom (Multiplex)" />
+        )}
 
         {/* Related comparisons */}
         <div className="mt-16">

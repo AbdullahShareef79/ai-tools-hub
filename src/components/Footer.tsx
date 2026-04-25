@@ -14,6 +14,7 @@ const footerLinks = {
     { name: 'AI Productivity Tools', href: '/best/ai-productivity-tools' },
   ],
   Compare: [
+    { name: 'All Comparisons', href: '/compare' },
     { name: 'StudyBuddy vs Anki', href: '/compare/studybuddy-vs-anki' },
     { name: 'ScribAI vs VoiceScribe', href: '/compare/scribai-vs-voicescribe' },
     { name: 'VoiceScribe vs Otter', href: '/compare/voicescribe-vs-otter' },

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import Script from 'next/script';
 
 const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-8689475230104463';
@@ -10,24 +11,27 @@ const ADSENSE_CLIENT_ID =
 const NO_AD_PATHS = ['/privacy', '/terms', '/contact', '/about'];
 
 /** Returns true when AdSense is properly configured */
-function isAdSenseEnabled(): boolean {
+export function isAdSenseEnabled(): boolean {
   return !!ADSENSE_CLIENT_ID && !ADSENSE_CLIENT_ID.includes('XXXX');
 }
 
 /* ─── Global Script ────────────────────────────────────────────── */
 
 /**
- * AdSense head script — include once in layout.tsx `<head>`.
- * Renders nothing when the env var is missing or still a placeholder.
+ * AdSense script — loaded with afterInteractive strategy for better
+ * Core Web Vitals. Enables Auto Ads for additional revenue.
+ * Include once in layout.tsx.
  */
 export function AdSenseScript() {
   if (!isAdSenseEnabled()) return null;
 
   return (
-    <script
+    <Script
+      id="adsense-script"
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
       crossOrigin="anonymous"
+      strategy="afterInteractive"
     />
   );
 }

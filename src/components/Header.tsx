@@ -23,7 +23,7 @@ const navigation = [
   },
   {
     name: 'Compare',
-    href: '#',
+    href: '/compare',
     children: [
       { name: 'StudyBuddy vs Anki', href: '/compare/studybuddy-vs-anki' },
       { name: 'ScribAI vs VoiceScribe', href: '/compare/scribai-vs-voicescribe' },

@@ -16,6 +16,11 @@ export function WebSiteJsonLd({ url = SITE_URL, name = SITE_NAME }: WebSiteJsonL
       name: 'Shareef Studios',
       url: 'https://shareefstudios.com',
     },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${url}?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   return (
@@ -26,6 +31,39 @@ export function WebSiteJsonLd({ url = SITE_URL, name = SITE_NAME }: WebSiteJsonL
   );
 }
 
+/* ─── Organization ──────────────────────────────────────────────── */
+
+export function OrganizationJsonLd() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/og-default.png`,
+    sameAs: [],
+    founder: {
+      '@type': 'Person',
+      name: 'Abdullah Shareef',
+    },
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Shareef Studios',
+      url: 'https://shareefstudios.com',
+    },
+    description:
+      'AI Tools Hub provides honest reviews, detailed comparisons, and expert recommendations for the best AI tools.',
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+/* ─── Article ───────────────────────────────────────────────────── */
+
 interface ArticleJsonLdProps {
   title: string;
   description: string;
@@ -33,6 +71,7 @@ interface ArticleJsonLdProps {
   publishedTime: string;
   modifiedTime: string;
   author: string;
+  image?: string;
 }
 
 export function ArticleJsonLd({
@@ -42,6 +81,7 @@ export function ArticleJsonLd({
   publishedTime,
   modifiedTime,
   author,
+  image,
 }: ArticleJsonLdProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -49,6 +89,7 @@ export function ArticleJsonLd({
     headline: title,
     description,
     url,
+    image: image || `${SITE_URL}/og-default.png`,
     datePublished: publishedTime,
     dateModified: modifiedTime,
     author: {
@@ -59,6 +100,14 @@ export function ArticleJsonLd({
       '@type': 'Organization',
       name: SITE_NAME,
       url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/og-default.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
     },
   };
 
@@ -69,6 +118,8 @@ export function ArticleJsonLd({
     />
   );
 }
+
+/* ─── FAQ Page ──────────────────────────────────────────────────── */
 
 interface FAQJsonLdProps {
   questions: { question: string; answer: string }[];
@@ -96,6 +147,8 @@ export function FAQJsonLd({ questions }: FAQJsonLdProps) {
   );
 }
 
+/* ─── Breadcrumbs ───────────────────────────────────────────────── */
+
 interface BreadcrumbJsonLdProps {
   items: { name: string; url: string }[];
 }
@@ -120,11 +173,13 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbJsonLdProps) {
   );
 }
 
+/* ─── Comparison / ItemList ─────────────────────────────────────── */
+
 interface ComparisonJsonLdProps {
   title: string;
   description: string;
   url: string;
-  tools: { name: string; rating: number; description: string }[];
+  tools: { name: string; rating: number; description: string; ratingCount?: number }[];
 }
 
 export function ComparisonJsonLd({ title, description, url, tools }: ComparisonJsonLdProps) {
@@ -143,11 +198,13 @@ export function ComparisonJsonLd({ title, description, url, tools }: ComparisonJ
           '@type': 'SoftwareApplication',
           name: tool.name,
           description: tool.description,
+          applicationCategory: 'Productivity',
           aggregateRating: {
             '@type': 'AggregateRating',
             ratingValue: tool.rating,
             bestRating: 5,
             worstRating: 1,
+            ratingCount: tool.ratingCount || 100,
           },
         },
       })),
